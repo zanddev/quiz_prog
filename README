@@ -1,4 +1,5 @@
-	IT
+   ( IT )
+
 Questo programma permette di eseguire gli spezzoni di codice presenti nelle
 slide PDF e copiati all'interno dei file di libreria .h.
 
@@ -6,14 +7,16 @@ Il fatto che il programma effettua una mera esecuzione di tali spezzoni,
 quindi in caso l'output sia indefinito il programma restituisce comunque
 un valore che va considerato non accettabile.
 
-vedere select.h per il programma
-
-Risposte_prog.txt contiene i risultati degli esami
-Quiz_prog.txt contiene i risultati dei quiz
+ .-
+ |  vedere select.h per il programma
+ |
+ | Risposte_prog.txt contiene i risultati degli esami
+ | Quiz_prog.txt contiene i risultati dei quiz
 
  .-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'-.-'
 
-	EN
+   ( EN )
+
 This program was implemented to test code fragment that are written inside
 PDF slides. They were copied into library files .h.
 
@@ -21,8 +24,8 @@ The program mere esecutes these fragments, so in the case the output is
 indeterminate the program would return anyway a value (that has to be
 considered not acceptable).
 
-
-  see  select.h for the program
-
-Risposte_prog.txt contains the exam answers
-Quiz_prog.txt contains the quiz answers
+ .-
+ | see  select.h for the program
+ |
+ | Risposte_prog.txt contains the exam answers
+ | Quiz_prog.txt contains the quiz answers
