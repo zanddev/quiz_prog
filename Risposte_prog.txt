@@ -1,0 +1,474 @@
+Esame 20_01_2016
+ 1. Riga3: Assegnamento non effettuabile: (1) non è una variabile bensì una costante intera
+ 2. Stampa: 1 0 2
+ 3. Stampa: -1
+ 4. Stampa: -2 -4 -6
+ 5. Stampa: N.D.
+ 6. Stampa: 0 1 0
+ 7. Riga7,8: Il tipo di dato S non è stato ancora definito, perciò le definizioni
+			 di variabili con tale tipo di dato sono invalide
+ 8. Stampa: 1 4
+ 9. Stampa: 3
+10. Stampa: ia
+
+Esame 01_02_2016
+ 1. Stampa: 5 6
+ 2. Stampa: 0 0 0 0
+ 3. Stampa: -1 0 -2
+ 4. Riga4: manca il punto e virgola dopo la keyword while()
+ 5. Riga4: Conflitto di nomi tra la variabile locale e il parametro x
+ 6. Stampa: 4
+ 7. Stampa: -2 -1 0 -1
+ 8. Stampa: 5
+ 9. Stampa: ao
+10. Stampa: 1 N.D.
+
+Esame 16_02_2016
+ 1. Riga4: Ridichiarazione della variabile x
+ 2. Stampa: 2 1 0
+ 3. Stampa: 2
+ 4. Stampa in loop: 1 0
+ 5. Stampa: N.D.
+ 6. Stampa: 10
+ 7. Riga1,5: Non si possono effettuare assegnamenti nella dichiarazione del tipo di dato
+ 8. Stampa: ciao
+ 9. Stampa: 1
+10. Stampa: 1 1
+
+Esame 07_06_2016
+ 1. Stampa: 10
+ 2. Stampa: 1 1 1
+ 3. Stampa: 2
+ 4. Stampa: 2 1
+ 5. Riga3: Le funzioni non possono ritornare array
+ 6. Stampa: 0
+ 7. Riga2,6: Non si possono effettuare assegnamenti nella dichiarazione del tipo di dato
+ 8. Stampa: 0 c \n 1 i \n 2 a \n 3 o \n
+ 9. Stampa: N.D. (dangling pointer)
+10. Stampa: N.D. N.D. (stampa il valore di x, che è sconosciuto)
+
+Esame 04_07_2016
+ 1. Riga3: Impossibile assegnare un valore alla costante 1
+ 2. Stampa: 1.0
+ 3. Stampa: -1
+ 4. Stampa: 4 2
+ 5. Riga9: Il prototipo e la funzione non hanno lo stesso tipo di ritorno
+ 6. Stampa: 9
+ 7. Stampa: 0
+ 8. Stampa: 0
+ 9. Stampa: 1
+10. Stampa: 3
+
+Esame 06_09_2016
+ 1. Riga3: Assegnamento non valido, impossibile assegnare un valore alla costante 1
+ 2. Stampa: 2 2.0
+ 3. Riga10: else senza un precedente if
+ 4. Stampa: N.D.
+ 5. Stampa: 2.0
+ 6. Non stampa niente perché ci sono infinite chiamate ricorsive (stack overflow)
+ 7. Stampa: 1
+ 8. Stampa: 0
+ 9. Stampa: 0
+10. Stampa: 2 2
+
+Esame 09_01_2017
+ 1. Stampa: 7
+ 2. Stampa: -2 0
+ 3. Stampa: 3
+ 4. Stampa: 6 4 2
+ 5. Stampa: 4
+ 6. Stampa: 0 1 2 3 4
+ 7. Riga8,9: x non è una struttura alla quale si accede per riferimento
+ 8. Riga4,5: A e B sono puntatori e non si può assegnare loro un valore
+ 9. Stampa: N.D.
+10. Stampa: 1 1
+
+Esame 18_01_2017a
+ 1. Stampa: 5
+ 2. Stampa: 0 1
+ 3. Stampa: 0
+ 4. Stampa: -2 -4 -6 -8 ...
+ 5. Stampa: 2
+ 6. Stampa: 0
+ 7. Riga2: Assegnamento non valido poiché le strutture non sono dello stesso tipo
+ 8. Riga7: L'indice deve essere una costante intera, non floating
+ 9. Stampa: 2 N.D.
+10. Stampa: C
+
+Esame 18_01_2017b
+ 1. Stampa: 0
+ 2. Stampa: 1 0
+ 3. Stampa: 1
+ 4. Stampa: 2 3 4 5 ...
+ 5. Stampa: 3
+ 6. Non stampa niente perché va in stack overflow
+ 7. Riga2: Assegnamento non valido poiché le strutture non sono dello stesso tipo
+ 8. Riga7: L'indice deve essere una costante intera, non floating
+ 9. Stampa: 3 N.D.
+10. Stampa: Cia
+
+Esame 01_02_2017
+ 1. Riga7: indentificatore '7hr33' non valido, inizia con un numero
+ 2. Stampa: 0 1
+ 3. Stampa: 0
+ 4. Stampa: 2 1 0
+ 5. Stampa: 0 0
+ 6. Stampa: avE,evA
+ 7. Riga3: z non è il nome di una variabile bensì un tipo di dato enumerativo vuoto, perciò non è assegnabile.
+ 8. Stampa: 3
+ 9. Stampa: 1 3
+10. Stampa: a c
+
+Esame 14_02_2017
+ 1. Riga9: identificatore i sconosciuto
+ 2. Stampa: 3 2 1
+ 3. Stampa: 0
+ 4. Stampa in loop: 3
+ 5. Stampa: 0 0.5
+ 6. Stampa: ,EvaveA
+ 7. Riga3: mancano le parentesi graffe prima di z
+ 8. Stampa: 8 7
+ 9. Stampa: 8 E
+10. Stampa: 1 N.D.
+
+Esame 12_06_2017
+ 1. Stampa: 7
+ 2. Stampa: 6 4 2
+ 3. Stampa: 0
+ 4. Riga5: i parametri del costrutto for devono essere separati da ;
+ 5. Riga3: le funzioni non possono ritornare array
+ 6. Non stampa niente poiché è in ricorsione infinita, quinda va in stack overflow
+ 7. Stampa: -6
+ 8. Stampa: 8 7
+ 9. Stampa: 3 4
+10. Stampa: N.D. (dangling pointer)
+
+Esame 03_07_2017
+ 1. Stampa: 7
+ 2. Stampa: 0 1 2
+ 3. Stampa: 2
+ 4. Stampa: 4 3 2 1
+ 5. Stampa: 0
+ 6. Stampa: 10
+ 7. Riga2,3: il tipo di dato a è sconosciuto
+ 8. Riga7: l'assegnamento a riga7 non è valido, non si può cambiare il valore di s
+ 9. Stampa: 2 5
+10. Stampa: 1
+
+Esame 04_09_2017
+ 1. Stampa: 11
+ 2. Stampa: 0 1 0
+ 3. Stampa: N.D.
+ 4. Riga11: ; dopo il while mancante
+ 5. Stampa: 0 N.D.
+ 6. Stampa: N.D. (Ricorsione infinita, va in stack overflow)
+ 7. Riga2: assegnamento non valido poiché struct x e struct y sono di tipo diverso
+ 8. Stampa: io
+ 9. Stampa: ia
+10. Stampa: ia
+
+Simulazione 20_12_2017
+ 1. Stampa: 5
+ 2. Stampa: 0 1
+ 3. Stampa: ia
+ 4. Stampa: 1
+ 5. Riga2: ridefinizione della variabile A
+ 6. Stampa: 0 1 2
+ 7. Riga2: tipo di dato A sconosciuto
+ 8. Stampa: 5 4 4 N.D.
+ 9. Stampa: N.D. N.D.
+10. Stampa: 7 19
+
+Esame 17_01_2018a
+ 1. Riga7: Manca l'lvalue nell'assegnamento: impossibile assegnare una variaible ad una costante intera
+ 2. Stampa: 1 1
+ 3. Stampa: 2
+ 4. Non stampa niente perché il ciclo do-while non termina
+ 5. Riga3: F è una variabile (essa nasconde la funzione F) e non una funzione, quindi la chiamata è illegale
+ 6. Stampa: 3
+ 7. Stampa: 4
+ 8. Stampa: 6 1
+ 9. Stampa: 4 0
+10. Stampa: 0 1
+
+Esame 17_01_2018b
+ 1. Riga7: Manca l'lvalue nell'assegnamento: impossibile assegnare una variaible ad una costante intera
+ 2. Stampa: 0 1
+ 3. Stampa: 1
+ 4. Stampa: 1
+ 5. Riga3: F è una variabile (parametro della funzione F) e non una funzione, quindi la chiamata è illegale
+ 6. Va in ricorsione infinita, quindi in stack overflow
+ 7. Stampa: 2
+ 8. Stampa: 6 0
+ 9. Stampa: 2 0
+10. Stampa: 1 0
+
+Esame 02_02_2018a
+ 1. Riga7: I nomi delle macro non possono iniziare con un numero
+ 2. Stampa: 1 1
+ 3. Stampa: 1 1
+ 4. Stampa: -2 -3 -4
+ 5. Riga8: Il prototipo definito precedentemente non corrisponde alla firma della funzione
+ 6. Stampa: 2 1 -1 -1
+ 7. Stampa: 1.0
+ 8. Stampa: 1 0
+ 9. Stampa: N.D. 3
+10. Stampa: 1 2 3
+
+Esame 02_02_2018b
+ 1. Riga7: I nomi delle macro non possono iniziare con un numero
+ 2. Stampa: 0 1
+ 3. Stampa: 1 0
+ 4. Stampa: 2 3 4
+ 5. Riga8: Il prototipo definito precedentemente non corrisponde alla firma della funzione
+ 6. Stampa: -2 -1 1 1
+ 7. Stampa: 2.0
+ 8. Stampa: 0 1
+ 9. Stampa: 3 N.D.
+10. Stampa: 3 2 1
+
+Esame 12_02_2018
+ 1. Stampa: 4 N.D.
+ 2. Stampa: 1 0
+ 3. Riga10: Z non è una costante intera ma una variabile
+ 4. Stampa: 0 -1 -2
+ 5. Stampa: N.D. N.D. N.D. (L’ordine di valutazione degli argomenti di una funzione è non specificato)
+ 6. Stampa: 1 -1 1 -2
+ 7. Riga4: conflitto di nomi tra la funzione principale main() e la variabile di tipo intero main definita a riga2
+ 8. Stampa: 4 24
+ 9. Stampa: N.D. 1
+10. Stampa: 0
+
+Esame 14_06_2018
+ 1. Riga7: il lvalue dell'assegnamento non può essere una costante
+ 2. Stampa: 0 1
+ 3. Stampa: 1
+ 4. Stampa: -3 -5
+ 5. Riga4: prototipo di f discordante con il tipo di ritorno e/o i paramentri formali della funzione dichiarata a riga8
+ 6. Stampa: 0 -1
+ 7. Stampa: 1.0
+ 8. Stampa: 4 10
+ 9. Stampa: 0 N.D.
+10. Stampa: 0 1
+
+Esame 09_07_2018
+ 1. Stampa: 6 N.D.
+ 2. Stampa: 1 0
+ 3. Riga10: Z non è una costante intera ma una variabile
+ 4. Stampa: 1
+ 5. Riga3: X è una variabile, non una funzione e né un puntatore a funzione
+ 6. Stampa: 2
+ 7. Stampa: 3
+ 8. Stampa: 9 0
+ 9. Stampa: 4 3
+10. Stampa: 0 -1 -2
+
+Esame 06_09_2018
++  1. Riga8: Il nome della macro inizia con un numero
++  2. Stampa: 1 0
++  3. Stampa: 1 2
++  4. Stampa il loop: 0
++  5. Stampa: N.D. N.D. N.D. (L’ordine di valutazione degli argomenti di una funzione è non specificato)
+-  6. Stampa: 0 0 1
++  7. Riga: main non è una funzione bensì una variabile locale, che nasconde il nome della funzione
++  8. Stampa: 0 0
++  9. Stampa: 2 0
++ 10. Stampa: 0
+
+Simulazione 19_12_2018
+ 1. Stampa: 3 2
+ 2. Stampa: 7 6 4
+ 3. Stampa: 0
+ 4. Stampa in loop: 1 0\n 0 1\n
+ 5. Stampa: N.D. 
+ 6. Riga5: f non è una funzione bensì una variabile locale (parametro locale)
+ 7. Riga2: conflitto di identificatori tra la costante enumerativa A e il tipo di dato A di tipo enum A 
+ 8. Stampa: 0 5
+ 9. Stampa: 0 1
+10. Stampa: 0 0
+
+Esame 10_01_2019
+ 1. Stampa: 2 5
+ 2. Stampa: -1 -2
+ 3. Stampa: -1 -2
+ 4. Loop: -1 -2\n
+ 5. Stampa: N.D. N.D.
+ 6.	Stampa: 1
+ 7. Riga3: impossibile assegnare A al tipo generico enum z
+ 8. Riga6: assegnamento non valido, non si può modificare l'indirizzo di memoria della variabile array S2
+ 9. Stampa: a1 a2
+10. Stampa: a1 N.D. (il tipo di q non è compatibile con &S2)
+
+Esame 29_01_2019
+ 1. Stampa: 2 2
+ 2. Stampa: 0 0
+ 3. Stampa: -1 0 -2
+ 4. Stampa: 1 2 -1\n
+ 5. Riga2: conflitto di nomi tra variabile di tipo struct x e il paramentro passato x di tipo intero
+ 6. Stampa: 4
+ 7. Riga2: tipo sconosciuto x
+ 8. Stampa: giS
+ 9. Stampa: gnirtS
+10. Stampa: gnirtS
+
+Esame 12_02_2019
+ 1. Riga7: variabile i non definita
+ 2. Stampa: N.D. 0 1
+ 3. Stampa: 1 1 0
+ 4.	Stampa: 1 1 0\n  2 2 0\n
+    oppure esce dal ciclo e non stampa niente
+ 5. Stampa: 0 1
+ 6. Stampa: 0 0
+ 7. Stampa: 1 0
+ 8. Stampa: 6 N.D. N.D.
+ 9. Stampa: can
+10. Stampa: ci N.D.
+
+Esame 12_06_2019
+ 1. Riga7: variabile i non definita
+ 2. Stampa: 2 1
+ 3. Stampa: 3 4 5
+ 4. Stampa: 1 0 -1\n  2 1 0\n
+ 5. Stampa: N.D. N.D.
+ 6. Stampa: 3
+ 7. Riga6: il tipo di dato c non è compatibile con quello di a e b quindi l'assegnamento c = b non è valido
+ 8. Stampa: eoc
+ 9. Stampa: nac
+10. Stampa: io N.D.
+
+Esame 04_07_2019
+ 1. Stampa: -14 6
+ 2. Stampa: 1 2
+ 3. Stampa: 0 0 1
+ 4. Non stampa niente poiché non esce dal ciclo while
+ 5. Stampa: N.D. N.D.
+ 6. Stampa: 5
+ 7. Riga4: tipo di dato x non conosciuto
+ 8. Riga5: assegnamento non valido
+ 9. Stampa: Srn
+10. Stampa: nrS
+
+Esame 12_09_2019
+ 1. Riga10: lvalue non valido (deve essere una variabile) per l'operatore unario --
+ 2. Stampa: 1 -1 -2
+ 3. Stampa: 0 -1 -2
+ 4. Stampa: 1 0
+ 5. Riga2: conflitto di nomi tra la variabile locale di tipo double e il parametro passato
+		   alla funzione di tipo intero
+ 6. Stampa: 1
+ 7. Stampa: 1 0
+ 8. Stampa 1a riga: 1 8
+	Stampa 2a riga: 1 N.D.
+ 9. Stampa: a1 a2 + una sequenza indefinita di caratteri
+10. Stampa: a1 a2 + una sequenza indefinita di caratteri
+
+Simulazione 13_12_2019
+ 1. Stampa: 1 0 2
+ 2. Stampa: -1
+ 3. Stampa: -2 -4 -6
+ 4. Stampa: N.D.
+ 5. Stampa: 0 1 0
+ 6. Stampa: 1 4
+ 7. Stampa: 3
+ 8. Stampa: ia
+
+Esame 14_01_2020
+ 1. Stampa: 5 16
+ 2. Stampa: 0 0
+ 3. Stampa: 2 2
+ 4. Stampa: 0\n 1\n
+ 5. Stampa: 0.25
+ 6. Stampa: 6 8
+ 7. Stampa: N.D. test  (stringa nulla)
+ 8. Stampa: 7 7
+
+Esame 28_01_2020
+ 1. Stampa: 4 0
+ 2. Stampa: 1 1
+ 3. Stampa: 0 1
+ 4. Stampa: 0 1\n e poi va in loop senza stampe
+ 5. Stampa: N.D.
+ 6. Stampa: 5 4
+ 7. Stampa: ciaooaic\n
+ 8. Stampa: ciaooaic\n
+
+Esame 19_02_2020
+ 1. Stampa: 6 -6
+ 2. Stampa: 1 3
+ 3. Stampa: 1 1
+ 4. Stampa: 1 1
+ 5. Stampa: -1 1
+ 6. Stampa: g g g +sequenza indeterminata di caratteri
+ 7. Stampa: s r n
+ 8. Stampa: ciao
+
+Esame 08_06_2020
+ 1. Stampa: 7 6
+ 2. Stampa: N.D. 1
+ 3. Stampa: 1 0
+ 4. Loop: 0 1 2 3 ..
+ 5. Stampa: 2 N.D.
+ 6. Stampa: N.D. N.D.
+ 7. Stampa: oaic
+ 8. Stampa: ciao
+
+Esame 06_07_2020
+ 1. Stampa: 11 18
+ 2. Stampa: 0 2
+ 3. Stampa: 1 1
+ 4. Stampa: 0 0\n 0 1\n 
+ 5. Stampa: 0 0
+ 6. Stampa: 5 4
+ 7. Stampa: ccc
+ 8. Stampa: ciao
+
+Esame 14_09_2020
+ 1. Stampa: 7 0
+ 2. Stampa: 2 1
+ 3. Stampa: 2 3
+ 4. Stampa in loop: 1 1\n
+ 5. Stampa: 0.5 2.0
+ 6. Stampa: o o N.D.
+ 7. Stampa: ao
+ 8. Stampa: ocai
+
+Simulazione 18_12_2020
+ 1. Stampa: 10
+ 2. Stampa: 0 1
+ 3. Stampa: 1 1
+ 4. Stampa: 0 1 loop senza stampe
+ 5. Stampa: 5 9
+ 6. Stampa: 3, 2
+ 7. Stampa: 3 4
+ 8. Stampa: 0 1
+
+Esame 11_01_2021
+ 1. Stampa: N.D. 1
+ 2. Stampa: N.D. 3 2
+ 3. Stampa: 1 N.D.
+ 4. Stampa: 5 2 
+ 5. Stampa: 0 0
+ 6. Stampa: 7 6
+ 7. Stampa: one
+ 8. Stampa: iao
+
+Esame 25_01_2021
+ 1. Stampa: 8 16
+ 2. Stampa: 1 0
+ 3. Stampa: 0 1
+ 4. Stampa in loop: 4
+ 5. Stampa: 3 5
+ 6. Stampa: 1 N.D.
+ 7. Stampa: 5 1 N.D.
+ 8. Stampa: N.D. 1
+
+Esame 08_02_2021
+ 1. Stampa: 2 16
+ 2. Stampa: N.D. N.D.
+ 3. Stampa: 0 1
+ 4. Non stampa niente poiché non esce dal ciclo
+ 5. Stampa: -6 6
+ 6. Stampa: 9 3
+ 7. Stampa: 5 0
+ 8. Stampa: 5 0
+

@@ -1,0 +1,2285 @@
+
+Quesiti2
+> Istruzioni condizionali
++  1. Riga7:  1 = 10; / Manca il valore sinistro per effettuare l'assegnazione (valore costante)
++  2. Riga8:  Else without if
++  3. Riga7:  Manca la condizione nel costrutto if
++  4. Stampa: 10
++  5. Stampa: 20
++  6. Stampa: 10 20 30
++  7. Stampa: 10 N.D. 30
++  8. Stampa: 30 30 31
++  9. Stampa: 30 30 30
++ 10. Stampa: 0 0 0
+- 11. Riga5: Variabile definita dentro il costrutto switch
++	  Riga8: case 1+1 e case 2 / Casi duplicati dentro il costrutto switch
++ 12. Riga 6: Il valore del case non è un valore costante
++ 13. Stampa: 2 2
++ 14. Stampa: 4 2
++ 15. Stampa: 4 4
++ 16. Stampa: 2 2
++ 17. Stampa: 3 3
++ 18. Stampa: 1 2
++ 19. Stampa: 3 2
++ 20. Stampa: 0 0
+
+> Istruzioni iterative
++ 21. Riga6: Mancano due campi del ciclo for (devono essere tre separati da ;)
+- 22. Riga6: int i = 60; non fa parte dello standard ANSI ISO C89
+      Riga6: Mancano un campo del ciclo for (devono essere tre separati da ;)
++ 23. Stampa in loop: 0
++ 24. Stampa in loop: 0
++ 25. Stampa 10 volte: "Pippo\n"
++ 26. Stampa infinite volte: "Pippo\n"
++ 27. Stampa 4 volte: "Pippo\n"
++ 28. Stampa: 0
+- 29.	i x
+		0 2
+	   -2 3
+	   -4 4
+	  Stampa: 4
++ 30.	i  x
+		0 -1
+	   -1  0
+		0  1
+	  Stampa: 1
++ 31. Riga4: Mancano le parentesi tonde richieste dal costrutto while
++ 32. Riga7: L'operatore % non ammette un l-value di tipo floating
+- 33.	i: 1 2V 3 4V 5 6F
+	  Stampa: 2 4
++ 34.	i: 1 1V 2  3 3V 4  5 5V 6  7 7F 8
+	  Stampa: 3 5 7
++ 35. Stampa: 0
++ 36.	8V 6V 4V 2V 0F
+	  Stampa 4 volte: "Pippo\n"
++ 37.	9V 7V 5V 3V 1V -1V ...
+	  Stampa infinite volte: "Pippo\n"
++ 38.	-1V 0 0V 1
+		Stampa: 1
+- 39. 	 x          x
+		-1+1 --> 0F 0
+	  Stampa: 0
+- 40.	x   i
+	   -1   0
+	   -2V -2
+	   -1V -4
+	    0F
+	  Stampa: -4 0
++ 41. Riga 11: Expected ; before the end of line9 
++ 42. Riga9: Mancano le parentesi tonde richieste dal costrutto do-while
++ 43.	(x,n)(4,1)(3V,2)(2V,3)(1V,4)(0F,4)
+	  Stampa 4 volte: "Pippo\n"
+- 44.	(x,n) (4,0)(5,1) (3V,1)(4,2) (2V,2)(3,3) (1V,3)(2,4) (0F)
+	  Stampa 4 volte: "Pippo\n"
++ 45. (4)V (2)V (0)F
+	  Stampa: 4\n 2\n 0\n
++ 46. Stampa in loop: -1
++ 47. Stampa: 0 1 2 3 4 (ciclo eseguito 5 volte)
+- 48.	2 [2]1 (1)V [1]0 0F
+	  Stampa: 2 1
+- 49.	1 [1]0 (0 || 1)V [1]0 (0 || 1)V ...
+	  Stampa in loop: 1
++ 50.	 x  y
+		-1 -10
+		-7 -9
+		-6 -8
+		-5 -7
+		-4 -6
+		-3 -5
+		-2 -4
+		-1 -3
+		 0 -2
+	  Stampa: 0 -2
+
+Score1 19/20 = 95%
+Score2 22/30 = 73%
+ScoreT 41/50 = 82%
+
+Quesiti3
+> Funzioni
++  1. Riga8: float è una keyword riservata
++  2. Riga4: blocco di istruzioni fuori da una funzione (expected id before)
++  3. Riga5: istruzione ; non in una funzione
++  4. Riga10: Il tipo di ritorno del prototipo e della funzione non corrispondono
+-  5. Manca il valore di ritorno
+	  Conflitto di tipo tra il dedotto int f(double) e il reale double f(int)
++  6. Stampa: 10
++  7. Stampa: 0
++  8. Stampa: 1
+-  9. Stampa: 1
+- 10. Stampa il valore di y non inizializzato, quindi N.D.
++ 11.	f(1)=0, x=0  f(0) N.D.
+	  Stampa 0 N.D.
++ 12. Stampa: 0.0 1.0 2.0 3.0 4.0
++ 13. Stampa: 1 2 3 4 5
+- 14. Non stampa: 0 1
+	  Stampa N.D. N.D. poiché l'ordine di valutazione dei parametri non è specificato
+- 15.	f(x++) = f(0) x=1 return 1
+	  Stampa: 1
++ 16.	f(++x) = f(1) x=1 return 2
+	  Stampa: 2
++ 17.	f(1,x=1)=(2,x=2) f(2,x=2)=(4,x=4)
+	  Stampa: 4
++ 18.	f(f(1,1),f(1,1)) = f(2,2) = 4 ( = x)
+		f(f(4,1),f(4,1)) = f(5,5) = 10 (= y)
+	  Stampa: 4 10
++ 19.	f(0)=1 --> f(-2) = -1 (= x)
+	  Stampa: -1
++ 20.	f(0)=1 x=0 --> x=-2 f(-2)=-1 (=y)
+	  Stampa: -2 -1
++ 21.	f(0)=1 x=1 --> x=-1 f(-1)=0 (=y) x=0
+	  Stampa: 0 0
+- 22.	f(0)=0 x=1 --> x=3 f(3)=3 (=y) x=4
+	  Stampa: 4 3
++ 23.	(7,2,r=0) | V(5,2,r=1) V(3,2,r=2) F(1,2,r=2) | 2
+	  Stampa: 2 (quoziente 7/2-1) ERR
++ 24. 	f(-7,-2), s=-1 (x,y)(-6,-1)(-5,0)
+	  Stampa: -5
++ 25.	f(5,-3), s=-1 (r,y)(-1*5,-2) r=-5 (-1*5,-1)(-1*5,0)
+	  Stampa: -15 (prodotto 5 * -3)
+
+> Funzioni ricorsive
++ 26.	f(3) f(2) f(1) f(0) RET
+	  Stampa: 1 2 3
++ 27.	f(3) f(2) f(1) f(0) RET
+	  Stampa: 3 2 1
++ 28.	f(3) f(2) f(1) f(0) RET
+	  Stampa: 3 2 1 1 2 3
++ 29.	f(3)s=1 -3 f(2)s=1 -2 f(1)s=1 -1 f(0)s=-1 RET
+	  Stampa: -3 -2 -1 1 2 3
++ 30.	f(2)x=0 f(1)x=1 f(2)x=0 ...
+	  Stampa in loop: 0 1 (dopo va in crash quando lo stack è pieno)
++ 31.	f(-2)[s=1] 1+f(-2+1) = 1+f(-1)[s=1] = 2+f(0)[s=1] = 2+f(0) = 2+0 = 2
+	  Stampa: 2 (valore assoluto di -2)
++ 32.	f(2)[s=-1] -1+f(2-1) = -1+f(1)[s=-1] = -1-1+f(1-1)[s=-1] = -2+f(0) = -2+0 = -2
+	  Stampa: -2 (la funzione ricorsiva f() inverte il segno)
++ 33.	f(3,3) f(2,2) f(1,1) f(0,0) RIT 0
+	  Stampa: 0 (f() ritorna 1 se x < y, altrimenti ritorna 0 (ricorsione in coda)
++ 34.	f(3,3) f(2,2) f(1,1) f(0,0) RIT 1
+	  Stampa: 1 (f() ritorna 1 se x <= y, altrimenti ritorna 0 (ricorsione in coda)
++ 35.	f(3,2) f(2,1) f(1,0) RIT 0
+	  Stampa: 0 (f() ritorna 1 se x < y, altrimenti ritorna 0 (ricorsione in coda)
++ 36.	f(-2)[s=-1] f(-2-2*-1)=f(-2+2)=f(0)[s=-1] RIT 1
+	  Stampa: 1 (f() ritorna 1 se x è pari, altrimenti ritorna 0 (ricorsione in coda)
++ 37.	f(-2)[s=-1] f(-2-2*-1)=f(-2+2)=f(0)[s=-1] RIT 0
+	  Stampa: 0 (f() ritorna 1 se x è dispari, altrimenti ritorna 0 (ricorsione in coda)
++ 38.	f(7,2) 1+f(5,2) 2+f(3,2) 3+f(1,2)=0
+	  Stampa: 3 (la funzione f() calcola la divisione intera tra x ed y)
++ 39.	f(7,2) f(5,2) f(3,2) f(1,2) 1
+	  Stampa: 1 (la funzione f() calcola il resto della divisione intera tra x ed y) (ric in coda)
+- 40.	f(-7,-2)[s=-1] -1+f(-7,-2+1) = -1+f(-7,-1)[s=-1] = -2+f(-7,0)[s=1] RIT -2-7 = -9
+	  Stampa: -9 (la funzione f() calcola la somma tra x ed y)
++ 41.	f(-7,-2)[s=-1] f(-7-1,-2+1) = f(-8,-1)[s=-1] = f(-9,0)[s=1] RIT -9
+	  Stampa: -9 (la funzione f() calcola la somma tra x ed y) (ricorsione in coda)
++ 42.	f(-7,-2)[s=-1] f(-7,-2+1)+1 = f(-7,-1)[s=-1]+1 = f(-7,0)[s=1]+2 RIT -7+2 = -5
+	  Stampa: -5 (la funzione f() calcola la sottrazione tra x ed y)
++ 43.	f(-7,-2)[s=-1] f(-7+1,-2+1) = f(-6,-1)[s=-1] = f(-5,0)[s=1] RIT -5
+	  Stampa: -5 (la funzione f() calcola la sottrazione tra x ed y) (ricorsione in coda)
++ 44.	f(5,-3)[s=-1] -1*5+f(5,-2)[s=-1] = -10+f(5,-1)[s=-1] = -15+f(5,0)[s=1] RIT -15+0 = -15
+	  Stampa: -15 (la funzione f() calcola il prodotto di x per y)
++ 45.	f(-5)[s=-1] = -1*2+f(-5+1)[s=-1] = -2+f(4)[s=-1] = -4+f(3)[s=-1] =
+		                   -6+f(2)[s=-1] = -8+f(1)[s=-1] = -10+f(0)[s=-1] RIT -10+0 = -10
+	  Stampa: -10 (la funzione f() calcola il prodotto di x per 2 (il doppio))
++ 46.	f(3) = 2*f(2) = 2*2*f(1) = 2*2*2*f(0) = 2*2*2*1 RIT = 8
+	  Stampa: 8 (la funzione f() calcola la potenza di 2 elevato alla x)
++ 47.	f(3) = 3*f(2) = 3*3*f(1) = 3*3*3*f(0) = 3*3*3*1 RIT = 27
+	  Stampa: 27 (la funzione f() calcola la potenza di 3 elevato alla x)
++ 48.	f(4) = 4+f(3) = 4+3+f(2) = 4+3+2+f(1) = 4+3+2+1+f(0) = 4+3+2+1+0 RIT 4+3+2+1 = 7+3 = 10
+	  Stampa: 10 (la funzione f() calcola l’x-esimo numero triangolare (somma dei primi k interi))
++ 49.	f(6)[s=1] = f(6-1)[s=2] = f(5)[s=2] = f(5-2)[s=3] = f(3)[s=3] = f(3-3)[s=4] = f(0)[s=4] = 1 RIT 1
+	  Stampa: 1 (La funzione f() ritorna 1 se x è un numero triangolare (somma dei primi k interi)
+				 Funziona correttamente solo la prima volta che viene invocata.)
++ 50.	f(-3)[s=-1] = f(-3+1)[s=-1]+2(-1)(-3)-1 = f(-2)[s=-1]+(2*3)-1 = f(-2)[s=-1]+5 = 
+					= 5+f(-2+1)[s=-1]+2(-1)(-2)-1 = 5+f(-1)[s=-1]+(2*2)-1 = 5+f(-1)[s=-1]+3 = 
+					= 8+f(-1+1)[s=-1]+2(-1)(-1)-1 = 8+f( 0)[s=-1]+(2*1)-1 = 8+f( 0)[s=-1]+1 = 
+					= 9+f(0)[s=-1] --> RIT 9+0 = 9
+
+	  Stampa: 9 (la funzione f() calcola il quadrato di x)
+		Proprietà ricorsive della funzione potenza al quadrato:
+		- Se x è positivo:
+			(x − 1)^2 = x^2 − 2x + 1  -->  x^2 = (x − 1)^2 + 2x − 1
+		- Se x è negativo:
+			(x + 1)^2 = x^2 + 2x + 1  -->  x^2 = (x + 1)^2 − 2x − 1
+
+Score1 19/25 = 76%
+Score2 24/25 = 96%  4%/+
+ScoreT 42/50 = 86%  2%/+
+
+Quesiti4
+> enum
++  1. Riga4: Valore decimale assegnato alla costante enumerativa A
++  2. Riga3: Costanti enumerative B e C duplicate
++  3. Riga5: Costante enumerativa A duplicata (a causa della sost.ne di B con A)
++  4. Riga3: Assegnamento non valido, E e Z non sono dello stesso tipo
+			 L’identificatore z non è una variabile ma il nome di un tipo enumerativo vuoto.
++  5. Riga2: Mancano le virgole tra D, E e F
++  6. Stampa: 2 3 -1 0
++  7.	A=2 B=3 C=-1 D=0 A+B+C+D=4 
+	  Stampa: 4 2
+-  8.	sizeof(x) = sizeof(enum(E)) (=sizeof(int))
+	  Stampa: 1
++  9.	A=-1 B=0 C=-1 D=0
+		enum E = -1
+		x *= D+1 x*=1 x
+	  Stampa: -1
++ 10.	A=-1 B=0 C=-1 D=0
+		enum E = -1
+		x /= D x/=0 x = x/0
+	  Stampa: EXCEPTION  - division by 0 at line8
+
+> struct
++ 11. Riga1: inizializzazione nella dichiarazione del tipo
+	  Riga6: inizializzazione non valida
+- 12. Riga1: Manca ; dopo int x
++ 13. Riga11: Assegnamento non valido (tipi diversi)
+	  Riga12: Assegnamento non valido (tipi diversi)
++ 14. Riga7: Assegnamento in formato lista non eseguito in fase di dichiarazione
++ 15. Riga8: Operazione di somma non valida
++ 16.	a = {{2},0} = {{2,0},0} --> a.x.x=2 , a.x.y=0 , a.y=0
+	  Stampa: 2 0 0
++ 17.	a = {{2.1,1.1},0} = {{2,1},0} --> a.x.x=2 , a.x.y=1 , a.y=0
+	  Stampa: 2 1 0
++ 18.	a = {0} , b = f({0}) = {1} --> a.x=2 , b.x=1
+	  Stampa: 0 1
++ 19.	a = {0} --> b=f(b)=f({?})={1}, a={1} --> a.x=1 , b.x=1
+	  Stampa: 1 1
++ 20.	a = {2,5} --> a.x 1 bit (0÷1), a.y 2 bit (0÷3)
+	  Stampa: N.D. N.D. (overflow)
+
+> union
++ 21. Riga1: Inizializzazione non possibile in fase di dichiarazione del tipo
+	  Riga6: Assegnamento non valido
++ 22. Riga1: Manca il ; dopo int x
++ 23. Riga11 e 12: Assegnamenti non validi
++ 24. Riga7: Inizializzazione non valida poiché non contestuale alla dichiarazione
++ 25. Riga8: Operazione di somma non valida
+- 26. Stampa: -1
++ 27. Stampa: N.D.
++ 28. Stampa: 0
++ 29. Stampa: N.D. y={1,{garbage,1.1}}
++ 30. Stampa: 1.1 y={0,{garbage,1.1}}
+
+> typedef
++ 31. Riga2: char è una keyword riservata
++ 32. Riga6,7,8: f,i,d sono variabili non dichiarate (sono solo tipi di dati)
++ 33. Riga4: inizializzazione non valida
++ 34. Riga3: Expected ; before
++ 35. Riga3: Assegnamento non valido
++ 36.	double x = 2; int y = 1.5;
+		x *= y --> x = x * y = 2.0 * 1 = 2.0
+      Stampa: 2.0
++ 37.	x=1, y=1; z=1.0; x = z*y = 1.0*1 = 1.0 -> 1; y = z*x = 1.0*1 = 1.0 -> 1
+	  Stampa: 1 1
++ 38. Stampa: 1
++ 39.	f() return (double) 1.1;
+		T x = f();
+		x = int f();
+		printf("%.1f\n",(double) (int) (double) 1.1);
+	  Stampa: 1.0
++ 40.	f() return (int) 1.1;
+		T x = f();
+		x = double f();
+		printf("%.1f\n",(double) (double) (int) 1.1);
+	  Stampa: 1.0
+
+> Visibilità e namespace degli identificatori
++ 41. Riga3,7: Conflitto di nomi tra le due variabili S
++ 42. Riga3: Nome della funzione va in conflitto con la variabile A def. alla riga1
++ 43. Riga7: Nome della funzione va in conflitto con la variabile A def. alla riga5
+- 44. Riga7: Tag A duplicato con il tag enum A a riga6
++ 45. Riga5: Conflitto tra tipi diversi di dato: S e s sono di tipi diversi 
++ 46. Stampa: 0
++ 47. Stampa: 0
++ 48. Stampa: 1
++ 49. Stampa: 1 1.0
++ 50. Stampa: N.D. 1.0
+
+Score1 09/10 =  90%		Score4 10/10 = 100%
+Score2 10/10 = 100%		Score5 09/10 =  90%
+Score3 09/10 =  90%		ScoreT 47/50 =  94%
+
+Quesiti5
+> Array
++  1. Riga7: Dimensione dell'array non costante 
++  2. Riga4: Dimensione dell'array negativa
+	  Riga5: Dimensione dell'array decimale
+-  3. Riga7: L'indice per estrarre un elemento dall'array b è decimale
+-  4. Riga3: La lista per inizializzare c è vuota
++  5. Riga3: È necessario specificare la dimensione dell'array al momento della dichiarazione
++  6. Riga6: L'inizializzazione con lista va effettuata contestualmete alla dichiarazione
++  7. Riga4: È obbligatorio specificare in una matrice 2*2 la seconda dimensione 
++  8. Riga2,3: Si può omettere solo la prima dimensione durante la dichiarazione
++  9. Riga6: Assegmanento non valido
++ 10. Riga7,8: Assegnamenti non validi
++ 11. Riga3: Non è stato specificato il secondo indice della matrice 2*2 passata come parametro alla funzione 
++ 12. Riga1,3: Le funzioni non possono ritornare array
++ 13. Stampa: 0
++ 14.	10*sizeof(int) = 10*4 = 40
+		40*sizeof(char) = 40*1 = 40
+	  Stampa: 1
++ 15. Stampa: 0
++ 16. Stampa: 1
++ 17. Stampa: 1
++ 18. Stampa: 2 3 N.D.
++ 19.	a[3] = {1, 2, 3}
+		a[a[0]] = a[1] = 2
+		a[a[a[0]]] = a[a[1]] = a[2] = 3
+	  Stampa: 2\n 3\n
++ 20.	a[3] = {-1, -2, -3}
+		a[a[0]] = a[-1] = N.D.
+		a[a[a[0]]] = a[a[-1]] = a[N.D.] = N.D
+	  Stampa: N.D.\n N.D.\n
++ 21.	a[j][i] -->  a[0][0] a[1][0] a[0][1] a[1][1]
+	  Stampa: 1 3 2 4
++ 22.	a[0][0]=1 a[1][0]=2 a[0]=&a[0][0] a[1]=&a[1][0]
+	  Stampa: 1 2 {1} {2}
++ 23.	int a[] = {1, 2, 3};
+		int i = 0, x = 0;
+		while(i < sizeof(a) / sizeof(a[0]))
+			x += a[i++];
+		printf("%d\n", x);
+
+		while(i < 3) x += a[i++];
+		x=0;
+		i=0; x += a[i]; i=1; --> x += a[0]; --> x += 1; --> x = x+1; (=1)
+		i=1; x += a[i]; i=2; --> x += a[1]; --> x += 2; --> x = x+2; (=3)
+		i=2: x += a[i]; i=3; --> x += a[2]; --> x += 3; --> x = x+3; (=6)
+	  Stampa: 6 (somma degli elementi dell'array a)
++ 24.	a[0] = {1, 2}; , a[1] = {3, 4};
+		x += a[0].x + a[0].y --> x+= 1+2 --> x = x+3; --> x = 3
+		x += a[1].x + a[1].y --> x+= 3+4 --> x = x+7; --> x = 10
+	  Stampa: 10 (somma degli elementi nell’array di strutture)
++ 25.	a.x = {1, 2}; , a.y = {3, 4};
+		x += a.x[0] + a.y[0] --> x+= 1+3 --> x = x+4; --> x = 4
+		x += a.x[1] + a.y[1] --> x+= 2+4 --> x = x+6; --> x = 10
+	  Stampa: 10 (somma degli elementi nella struttura di array)
++ 26.	a[0] = {1, 2}; , a[1] = {3, 4};
+		a[0] = a[1]; --> a[0] = {3, 4} , a[1] = {3, 4};
+		x += a[0].x + a[0].y --> x+= 3+4 --> x = x+7; --> x = 7
+		x += a[1].x + a[1].y --> x+= 3+4 --> x = x+7; --> x = 14
+	  Stampa: 14 (somma degli interi 3+4+3+4)
++ 27.	a.x = {1, 2}; , a.y = {3, 4};
+		b.x = {1, 1}; , b.y = {1, 1};
+		a = b; a = {{1, 1}, {1, 1}} , b = {{1, 1}, {1, 1}}
+
+		x += a.x[0] + b.y[0] --> x+= 1+1 --> x = x+2; --> x = 2
+		x += a.x[1] + b.y[1] --> x+= 1+1 --> x = x+2; --> x = 4
+	  Stampa: 14 (somma degli interi 1+1+1+1)
++ 28. Stampa: 0
++ 29.	a[1]={0}; f(a) --> a[0] = 1; --> g(y) ininfluente
+		x = y + a[0] = 0 + 1 = 1
+	  Stampa: 1
++ 30.	0 + 1 + 2 + 3 + 4 = 10
+	  Stampa: 10
++ 31.	0 + 1 + 2 + 3 + 4 + 5 + N.D. + N.D. + N.D. + N.D. = N.D.
+	  Stampa: N.D.
++ 32. Stampa: 5 4 3 2 1 0 (inverte l'ordine degli elementi dell'array)
+- 33.	a[3][2] = {{0, 1}, {2, 3}, {4, 5}}; ogni elem è shiftato di 2
+		a[0][0] a[1][0] a[2][0]
+		In f ogni elemento di a[i][0] è shiftato di 3
+	  Non stampa: 0 2 4
+	  Stampa: 0 3 N.D.
++ 34.	a[3][2] = {{0, 1}, {2, 3}, {4, 5}}; ogni elem è shiftato di 2
+		In f ogni elemento di a[i][0] è shiftato di 3
+		a[0][0] a[0][1] a[0][2] a[1][0] a[1][1] a[1][2]
+	  Stampa: 0 1 2 \n 3 4 5
+- 35.	a[2][2] = {{0, 1, 2}, {3, 4, 5}}; ogni elem è shiftato di 2
+		In f ogni elemento di a[i][0] è shiftato di 3
+		a[0][0] a[0][1] a[1][0] a[1][1]
+	  Stampa: 0 1 \n 3 4
+
+> Stringhe
++ 36. Riga6: Assegnamento della stringa letterale all'array di caratteri non valida
++ 37. Riga2: Stringa letterale delimitata da apici
++ 38. Stampa: ciao\n 10\n
++ 39. Stampa: ciao + sequenza di caratteri non definita + 4
++ 40. Stampa: ci\n 5\n
++ 41. Stampa: ci\n 6\n
++ 42. Stampa: ci\n 5\n
++ 43. Stampa: ci\n 6\n
++ 44. Stampa: ciao + sequenza di caratteri non definita + 4
+- 45. Stampa: 1 (sono diversi i puntatori s1 e s2)
+- 46. Stampa: N.D. (non esiste l'elemento 4 di s1 mentre quello di s2 vale '\0')
+- 47. Stampa: N.D. (l'array di caratteri s1 non contiene il carattere terminatore finale a riga8
+					e non esiste la libreria strlen.h a riga2)
++ 48. Stampa: oaic
+- 49. Stampa: sequenza non definita (s1[1] non può contenere 5 elementi)
++ 50.			s1[5] = {'\0',0,  0,  0, 0}; , s2[5] = {'c','i','a','o','\0'};
+		f(s1,s2,0,3);
+				s1[5] = {'o', 0,  0,  0, 0}; , s2[5] = {'c','i','a','o','\0'};
+		f(s1,s2,1,2);
+				s1[5] = {'o','a', 0,  0, 0}; , s2[5] = {'c','i','a','o','\0'};
+		f(s1,s2,2,1);
+				s1[5] = {'o','a','i', 0, 0}; , s2[5] = {'c','i','a','o','\0'};
+		f(s1,s2,3,0);
+				s1[5] = {'o','a','i','c',0}; , s2[5] = {'c','i','a','o','\0'};
+	  Stampa: oaic (0 equivale a \0)
+
+Score1 31/35 = 89%
+Score2 11/15 = 73%
+ScoreT 42/50 = 84%
+
+Quesiti6
+> Puntatori
++  1. Riga4: Un numero decimale non può essere assegnato ad una variabile di tipo puntatore
+-  2. Riga8,10: Somma tra puntatori illegale
+	  Riga9: Sottrazione tra puntatori non dello stesso tipo
++  3. Riga8: Addizione tra puntatore e 0.0 (floating) illegale
++  4. Riga9: Confronto tra puntatore e 0.0 (floating) illegale
+	  Riga12: Moltiplicazione tra puntatori non possibile
++  5. Riga5: Divisione tra puntatore e 2 non possibile
++  6. Stampa: 5 3
++  7. Stampa: 2 5
++  8. Stampa: 2 2
++  9. Stampa: 3 3
++ 10.	x *= y; --> x = x*y = 2*3 = 6
+	  Stampa: 6 3
++ 11. Stampa: 2 2
+- 12. Stampa: N.D. (conversione del tipo di puntatore) e non 'c' in ASCII
++ 13. Stampa: ciao\n
++ 14. Stampa: oaic + una sequenza indefinita di caratteri + \n
+- 15.	a[3] = {10,20,30}; ++*p++; ++(*(&a[0]++)); ++(*(&a[0])), a = &a[1];  ++(a[0]), a[0] = 11;
+		++(*(q++)); ++(*(&a[0]++)); ++(*(&a[0])), a = &a[1];  ++(a[0]), a[0] = 12;
+	  Stampa: 11 12 12
++ 16. Stampa: 1 1
+- 17. Stampa: 2 1
++ 18. Stampa: -1 -1
+- 19. Stampa: 2 N.D.
++ 20. Stampa: 2 6 
+
+> Puntatory ed array
++ 21.	q[x-y+1] += p[x-x]; q[0] += p[0]; *q += *p; *q = *q + *p; y = y + x;
+	  Stampa: 2 5
++ 22.	p = q = &y; 0[p] = *&x; *(0+p) = x; *p = x; *(&y) = x; y = x;   
+	  Stampa: 2 2 (A[i] equivale a *(A+i))
++ 23. Stampa: 1 1
++ 24. Stampa: 2
++ 25. Stampa: 3
++ 26. Stampa: 2
++ 27. Stampa: N.D. (dangling pointer)
++ 28.	f(A+1)[0] = *f(A+1) = *f(&A[0]+1) = *f(&A[1]) = *(&A[2]) = A[2] = 3
+	  Stampa: 3
++ 29.	p = &A[0]; n = 3;
+		*q = p+n-1 = &A[0]+3-1 = &A[0]+2 = &A[2]
+		*p = *(p+1) --> *A = *(A+1) --> A[0] = A[1], A[1] = A[2]
+		A[] = {2, 3, 3}; *A = A[0]
+	  Stampa: 2
++ 30.	f(A,3) = *A+f(A+1,2) = *A+*(A+1)+f(A+2,1) = *A+*(A+1)+*(A+2) = A[0]+A[1]+A[2]
+		RIT A[0]+A[1]+A[2] = 1+2+3 = 6
+	  Stampa: 6
++ 31. Stampa: 1
+- 32.	p[0][2] = *(p+0)[2] = *p[2] = *(*(p)+2) = *(*p+2) = *(&A[0]+2) = *(&A[2]) = A[2] = 3
+	  Stampa: 3
++ 33.	**p = *(*p) = *(&A) = A[0] = 1
+	  Stampa: 1
+- 34.	**p = *(*p) = *(&A) = A[0] = 1 (indirizzo di memoria non compatibile col tipo puntato)
+	  Stampa: N.D.
++ 35. Stampa: 0x1001 0x1005
++ 36.	|_|_| |_|_|		|_| |_| |_| |_|
+		 ↑				 ↑
+			   ↑ ↑			 ↑   ↑
+
+		p[1][1] = *(p+1)[1] = *(*(p+1)+1) = *(*(&A[0][0]+1)+1) = *(*A[1][0]+1) = *(A[1][2]) = 4
+		q[1][1] = *(p+1)[1] = *(*(q+1)+1) = *(*(&A[0][0]+1)+1) = *(*A[1][0]+1) = *(A[1][0]) = 3
+	  Stampa: 4 3
++ 37.	|_|_| |_|_|		|_| |_| |_| |_|
+		       ↑			 ↑
+			     ↑			     ↑
+	  Stampa: 4 3
++ 38.	**(A+1) = *(*(A+1)+0) = *(A+1)[0] = A[1][0]
+	  Stampa: 0
+- 39.	p[a][b] = *(p+a)[b] = *(*(p+a)+b) = **(p+(a+b)) vedi motivazione quesito 40
+	  Stampa: 1 2 2 3
+- 40.	**(p+(a+b)) = p[a][b]  poiché p è definito come puntatore a vettore unitario
+	  Stampa: 1 2 3 4
+
+> Puntatori a puntatori
++ 41. Stampa: 0 0
++ 42.	p[0] = *(p), q[0][0] = *(q[0]) = **q 
+	  Stampa: 0 0
++ 43.	x=1, y=2, z=3, A[] = {&x, &y, &z}, 
+		**p = *(*p) = *A[0] = *(&x) = x
+		*p[1] =  *(*(A+1)) = *(&y) = y
+		p[2][0] = *(p[2]) = *(*(A+2)) = *(&z) = z
+	  Stampa: 1 2 3
+- 44.	p[0][0] =  *(*(A)) = *(A[0]) = *(&x) = x
+		p[0][1] = (*(p))[1] = *(A+1) = *(&y) overflow
+	  Stampa: 1 N.D. (regola di conv. A[i][j] = (*(A+i))[j] = *(*(A+i)+j))
++ 45.	x|&p| --> p|&x| --> x|1|
+	  Stampa: N.D. (dereferenziazione di NULL)
++ 46. Stampa: 2 1 (viene effettuato uno scambio)
++ 47.	q|&p| --> p|&x| --> x|1|
+		q|&p| --> p|NULL|
+	  Stampa: N.D. (deferenziazione di NULL)
+- 48.		  +---+
+		p --> | 1 |			    .
+			  +---+	 ------------| p = NULL; 
+			  +---+  ------------| *q continua a puntare a 1
+		q --> | p | p punta a 1 '
+     		  +---+
+	  Stampa: 1
++ 49. Stampa: N.D. - Dangling pointer
+- 50. **p +----+     p +---+     +---+ malloc
+		  | &p | --->  |   | --> | 1 |
+		  +----+       +---+     +---+
+	  Stampa: 1
+
+Score1 15/20 = 75%
+Score2 16/20 = 80%
+Score3 07/10 = 70%
+ScoreT 38/50 = 76%
+
+-------------------------------------------------------------------------------
+Esame 20_01_2016
++  1.	M(x,y) (x=y);
+		int x = M(1,2) --> int x = (1 = 2);
+	  Riga3: Assegnamento non effettuabile: l'lvalue (1) non è una variabile bensì una costante intera
++  2.	(x = 1)
+			x || !x + !x = 1 || !1 + !1 = 1 || N.C. + 0 = 1+0 = 1
+			x && !x + !x = 1 && !1 + !1 = 1 && 0 + 0 = 0+0 = 0 
+			(-x || -x) + (-x && -x) = (-1 || -1) + (-1 && -1) = 
+				= (-1 || N.C.) + (-1 && -1) = V + V = 1+1 = 2 
+	  Stampa: 1 0 2
++  3.	(x,y)(1,0)
+		(x > y) V --> if(y) --> if(0) ramo false
+		y-x = 0-1 = -1
+	  Stampa: -1
+-  4.		for(begin;cond;incr) istr; 
+			begin cond | istr incr cond | istr incr cond | ...
+		i=0 (6)V |	(i=-2)(PRINT -2) (-2+6)(4)V |
+					(i=-4)(PRINT -4) (-4+6)(2)V |
+					(i=-6)(PRINT -6) (-6+6)(0)F 
+	  Stampa: -2 -4 -6
++  5.	f(f(10)) = f(-10) ??
+		f(10) = -10
+	  Stampa: N.D.
++  6.	f(1)
+		+--	f(0)
+		|	|	f(-1)
+		|	|	Stampa: 0
+		|	\	f(-1)
+		+--	Stampa: 1
+		+--	f(0)
+			|	f(-1)
+			|	Stampa: 0
+			\	f(-1)
+	  Stampa: 0 1 0
++  7. Riga7,8: Il tipo di dato S non è stato ancora definito, perciò le definizioni
+				di variabili con tale tipo di dato sono invalide
++  8.	i<sizeof(A)/sizeof(A[1]) --> i<2
+			A[0][0] = 1
+			A[1][1] = 4
+	  Stampa: 1 4
++  9.	**(A+1) = *(*(A+1)+0) = *(A[1]+0) = A[1][0]
+			A[1] = {3,4}
+	  Stampa: 3
++ 10.	(p) --> | |
+		(q) --> 'C' 'i' 'a' 'o' '\0'
+
+		[p] --> (p)
+		[p] --> (q)
+		(q) <--> (q)
+		p[1] = *(p+1) = 'i' | p[2] = *(p+2) = 'a' 
+	  Stampa: ia
+
+Esame 01_02_2016
++  1.	M(x,y) (y = x*y) + 1
+		M(1+2,x) (x = 1+2*x) + 1
+		(x,y)(2, (x = 1+2*2) + 1)(5,5+1)(5,6)
+	  Stampa: 5 6
+-  2.	(x,y)(0,1)
+			x++ && y++ --> 0 x=1 && N.C. --> 0 (x,y)(1,1)
+			--x || --y --> x=0 0 || y=0 0 --> (0 || 0) = 0 (x,y)(0,0) 
+			(x)(0) , (y)(0)
+	  Stampa: 0 0 0 0
+-  3.	(x,y,z)(-1,1,0)
+		((++x && ++y) || z--)
+		((x=0 0 && N.C.) || z--) = (0 || z--) = (z--) = (0 z=-1) F
+			ramo false
+			(x,y,z)(0,1,-1) --> (--x,--y,--z)(-1,0,-2)
+	  Stampa: -1 0 -2
++  4. Riga4: manca il punto e virgola dopo la keyword while()
++  5. Riga4: Conflitto di nomi tra la variabile locale e il parametro x
++  6.	f(4)(y:0) = f(3)(y:1) = f(2)(y:2) = f(1)(y:3) = 1+3 = 4
+	  Stampa: 4
++  7.	(A,B,C,D)(-2,-1,0,-1)
+	  Stampa: -2 -1 0 -1
++  8.	s = {'c','i','a','o','\0'};
+		sizeof(s) = 5*sizeof(char) = 5*1 = 5
+	  Stampa: 5
++  9.		{'c','i','a','o','\0'};
+		s ----+
+		s++ ------+
+		s++ ----------+    s[1] = *(s+1) = 'o'
+	  Stampa: ao
++ 10.	(p) --> | | | |
+		(A) --> | | | |
+
+		(p) --> |-1| |-1|
+		(A) --> | 1| | 1|
+
+		(p) --> A[1]
+		p[0] = A[1] = 1, p[1] = A[2] = ???
+	  Stampa: 1 N.D.
+
+Esame 16_02_2016
++  1.	DECL(y) int x,y;
+		DECL(x) int x,x;
+	  Riga4: Ridichiarazione della variabile x
++  2.	(x,y,z)(0,0,0)
+			x += (y += (z = 0) + 1) + 1		(x,y,z)(0,0,0)
+			x += (y += 0 + 1) + 1
+
+			x += (y += 1) + 1				(x,y,z)(0,1,0)
+			x += 1 + 1
+			x += 2							(x,y,z)(2,1,0)
+	  Stampa: 2 1 0
++  3.	(x = 1)V --> x++; 1 x=2
+	  Stampa: 2
++  4.	(x,y)(1,0)
+	 	x 1V	while(x-- && ++y)  while(1 x=0 && y=1 1) V
+					printf(y) (1)		(x,y)(0,1)
+	 	x 0F	while(++x && y--)  while(x=1 1 && 1 y=0) V
+					printf(y) (0)		(x,y)(1,0)
+		Sono di nuovo le condizioni iniziali, quindi si ripete
+	  Stampa in loop: 1 0
+-  5. Stampa: N.D. (Vedere pdf slide8 - Le funzioni pag. 35)
++  6.	f(4) = 4+f(3) = 4+3+f(2) = 4+3+2+f(1) = 4+3+2+1+f(0) = 4+3+2+1+0 = 10
+	  Stampa: 10
+-  7. Riga1,5: Non si possono effettuare assegnamenti nella dichiarazione del tipo di dato
++  8.	    {'c','i','a','o','\0'};
+		while(*s != 0) - stampa la stringa per intero, il carattere terminatore vale 0
+	  Stampa: ciao
++  9.	(q) --> | | q allocato dinamicamente
+		q[0] = *q = 1
+		(q) --> |1|
+		*q = 1
+	  Stampa: 1
++ 10.	(p) --> x|1|
+		[q] --> (p)
+
+		p[0] = *p = x = 1
+		*q[0] = **q = *p = x = 1
+	  Stampa: 1 1
+
+Esame 07_06_2016
++  1.	M(x,y) x/y
+		M(1,1+9) = 1/1+9 = 1+9 = 10
+	  Stampa: 10
++  2.	(x,y,z)(0,0,0)
+			x += (y += (z += 1))
+			x += (y += 1)			(0,0,1)
+			x += (1)				(0,1,1)
+			x = x + 1				(1,1,1)
+	  Stampa: 1 1 1
+-  3.	(++x == 0) --> (x=1 1 == 0)F ramo falso
+		if(++x == 1) --> (x=2 2 == 1)F
+	  Stampa: 2
++  4.	(x = 2)
+	 	while(2)V	(2)(x = 1)
+	 	while(2)V	(1)(x = 0)
+	 	while(0)F
+	  Stampa: 2 1
++  5. Riga3: Le funzioni non possono ritornare array
++  6.	f(100) = f(99) = f(98) ... = f(2) = f(1) = f(0) = 0
+	  Stampa: 0
++  7. Riga2,6: Non si possono effettuare assegnamenti nella dichiarazione del tipo di dato
++  8.	{'c','i','a','o','\0'} -- n = 4 | strlen(s) = 4
+		    {'i','a','o','\0'} -- n = 4 | strlen(s) = 3
+		        {'a','o','\0'} -- n = 4 | strlen(s) = 2
+		            {'o','\0'} -- n = 4 | strlen(s) = 1
+		while(*(++s) != 0) - scorre la stringa per intero, il carattere terminatore vale 0
+	  Stampa: 0 c \n 1 i \n 2 a \n 3 o \n
++  9. Dangling pointer - La funzione ritorna un puntatore ad una variabile residente in un'area di memoria deallocata
+	  Stampa: N.D.
++ 10.	(p) --> x| |
+		[q] --> (p)
+
+		*p = x
+		**q = *p = x
+	  Stampa: N.D. N.D. (stampa il valore di x, che è sconosciuto)
+
+Esame 04_07_2016
++  1.	int x = 1 = 0;
+	  Riga3: Assegnamento 1=0 non valido, impossibile assegnare un valore ad una costante intera
++  2.	(x,y)(1,1.1)
+		y=x --> (x,y)(1,1.0)
+	  Stampa: 1.0
++  3.	(x=0)(x=1)V (x=-1)
+	  Stampa: -1
++  4.		for(begin;cond;incr) istr; 
+			begin cond | istr incr cond | istr incr cond | ...
+		i=4 (i=4)V | (PRINT 4) i=2 (i=2)V |
+					 (PRINT 2) i=0 (i=0)F
+	  Stampa: 4 2
++  5. Riga9: Il prototipo e la funzione non hanno lo stesso tipo di ritorno
++  6.	f(3,2) = 3*f(3,1) = 3*3*f(3,0) = 3*3*1 = 9
+	  Stampa: 9
++  7.	(A,B,C,D)(0,1,-1,0)
+		A+B+C+D = 0+1-1+0 = 0
+	  Stampa: 0
++  8.	s = {'c','i','a','o','\0'} -- sizeof(s) = 5
+	  Stampa: 0
++  9.	p e q puntano allo stesso indirizzo di memoria
+	  Stampa: 1
++ 10.	A[2][3] = {{1,2,3},{4,5,6}} --> A00 1  A01 2  A02 3  A10 4  A11 5  A12 6
+		int (*q)[1] = &A;
+		p[1][0] = *(p[1]+0) = *(*(q+1*2)+0) = *(*(q+2)+0) = **(q+2)
+				= *(*(q+0)+2) = *(*(A+0)+2) = A[0][2] ok = 3
+	  Stampa: 3
+
+Esame 06_09_2016
++  1.	M 1 = 0;
+		int x = M; --> int x = 1 = 0;
+	  Riga3: Assegnamento 1=0 non valido, impossibile assegnare un valore ad una costante intera
++  2.	x = (int)(double) 2.2 =  (int) 2.2 = 2
+		y = (double)(int) 2.2 = (double) 2 = 2.0
+	  Stampa: 2 2.0
++  3. Riga10: else senza un precedente if
++  4.	La variabile i non è stata inizializzata prima di essere usata
+	  Stampa: N.D.
++  5.	(double) f(1.1) = (double) f((int) 1.1) = (double) f(1) = (double) 2 = 2.0
+	  Stampa: 2.0
++  6.	f(10) = f(10)+f(9)+f(8)
+
+		f(10) = f(10)+f(9)+f(8)
+		f(9) = f(9)+f(8)+f(7)
+		f(8) = f(8)+f(7)+f(6)
+	  Non stampa niente poiché non riesce a risolvere tutte le chiamate ricorsive, quindi va in stack overflow
++  7.	(A,B,C,D)(0,1,2,3)
+			x = 0, y = D-3 = 3-3 = 0 | x==y 0==0 yes
+	  Stampa: 1
++  8.	sizeof(a) = 1_int, sizeof(b) = 2_int, sizeof(c) = 2_int | 2+4 == 4 6==4 NO
+	  Stampa: 0
++  9.	p e q puntano a due indirizzi di memoria diversi
+	  Stampa: 0
++ 10.		(p) --> x|1|
+			[q] --> (p)
+		**q = *p = x = y
+			(p) --> x|2|
+			[q] --> (p)
+		y = x = 2
+	  Stampa: 2 2
+
+Esame 09_01_2017
++  1.	M(x,y) (x*2)/y
+		M(1+2,1+2) --> (1+2*2)/1+2 = (1+4)/1+2 = 5+2 = 7
+	  Stampa: 7
++  2.	(x,y)(0,1)
+		(--x && --y) || (--x || --y)
+		(x=-1 -1 && y=0 0)F || (x=-2 -2 || N.C.) <-- (-2,0)
+	  Stampa: -2 0
++  3.	(x,y)(0,1)
+		(++x && ++y) || (++x || ++y)
+		(x=1 1 && y=2 2)V || N.C. true <-- (1,2) x+y=3
+	  Stampa: 3
++  4.		for(begin;cond;incr) istr; 
+			begin cond | istr incr cond | istr incr cond | ...
+		i=6 (i=6)V | (PRINT 6)(i=7) i=4 (i=4)V |
+					 (PRINT 4)(i=5) i=2 (i=2)V |
+					 (PRINT 2)(i=3) i=0 (i=0)F 
+	  Stampa: 6 4 2
++  5.	x=1
+		f() = 2 (x=2)
+		f()+x = 2+2 = 4
+	  Stampa: 4
++  6.	f(4)
+			f(3)
+				f(2)
+					f(1)
+						f(0)
+	  Stampa: 0 1 2 3 4
++  7. Riga8,9: x non è una struttura alla quale si accede per riferimento
+		(x->x e x->next sono sbagliati perché ci andrebbero al loro posto x.x e x.next)
++  8. Riga4,5: A e B sono puntatori e non si può assegnare loro un valore
++  9. Stampa: N.D. (dangling pointer)
++ 10.	(p) --> | |
+		[q] --> ( )
+
+		(p) --> |1|
+		[q] --> (p)
+	  Stampa: 1 1
+
+Esame 18_01_2017a
++  1.	int main() {
+			int i;
+			for(i=0; i<5 ; i++);
+				printf("%d\n", i);
+			return 0;
+		}
+	  Stampa: 5
++  2.	(x = 0)
+		x || (x-- * 2));
+		0 || (0 x=-1 * 2) --> (F || 0) (x=-1) 
+
+		x && --x;
+		-1 V && x=-2 -2 V --> (V && V) = V
+	  Stampa: 0 1
++  3.	(x = 0)
+		(1 && x) = (1 && 0) = 0 ramo falso
+	  Stampa: 0
++  4.		for(begin;cond;incr) istr; 
+			begin cond | istr incr cond | istr incr cond | ...
+		i=0 (i=1)V | (i=-2)(PRINT -2) (i=-1)V |
+					 (i=-4)(PRINT -4) (i=-3)V |
+					 (i=-6)(PRINT -6) (i=-5)V |
+					 (i=-8)(PRINT -8) (i=-7)V | ... 
+	  Stampa: -2 -4 -6 -8 ...
++  5.	f(1.1) = (int)(double)(char)(1.1+1)
+			   = (int)(double)(char)(2.1) = (int)(double) 2 = (int) 2.0 = 2
+	  Stampa: 2
++  6.	f(100) = 100*f(99) = 100*99*f(98) = 100*99*98*...*2*f(1) = 100*99*98*...*2*1*f(0) = 0
+	  Stampa: 0
++  7. Riga2: assegnamento non valido poiché le strutture non sono dello stesso tipo
++  8. Riga7: L'indice z per selezionare un elemento dall'array è decimale e non di tipo intero
++  9.	A[5][1] = {{1},{2},{3},{4},{5}} --> A00 1  A01 2  A02 3  A03 4  A04 5
+		p[1][0] = *(p[1]+0) = *(*(p+1*1)) = *(*A+1) = A[0][1] ok = 2
+		q[1][2] = *(q[1]+2) = *(*(q+1)+2) = *(*(p+1*3)+2)
+				= *(*(p+3)+2) = *(*(A+0)+5) = A[0][5] NO_OK = A[1][0] = ??
+	  Stampa: 2 N.D.
++ 10.	p = {'C','i','a','o','\0'};
+			(*r)[1] = r[0][1] = p[1] = 'i'
+			Visto che *r = p
+		p = {'C','\0','a','o','\0'};
+	  Stampa: C
+
+Esame 18_01_2017b
++  1.	int main() {
+			int i = 5;
+			while(--i > 0);			(4>0)V (3>0)V (2>0)V (1>0)V (0>0)F
+				printf("%d\n", i);
+			return 0;
+		}
+	  Stampa: 0
++  2.	(x = 1)
+		x || (x-- * 2));
+		1 || (N.C.) --> (V) (x = 1) 
+
+		x && --x;
+		1 V && x=0 0 F --> (V && F) = F
+	  Stampa: 1 0
++  3.	(x = 0)
+		(1 || x) = (1 || N.C.) = 1 ramo vero
+	  Stampa: 1
++  4.		for(begin;cond;incr) istr; 
+			begin cond | istr incr cond | istr incr cond | ...
+		i=1 V(i=0) | (i=2)(PRINT 2) V(i=1) |
+					 (i=3)(PRINT 3) V(i=2) |
+					 (i=4)(PRINT 4) V(i=3) |
+					 (i=5)(PRINT 5) V(i=4) | ... 
+	  Stampa: 2 3 4 5 ...
++  5.	f(2.2) = (int)(double)(char)(2.2+1)
+			   = (int)(double)(char)(3.2) = (int)(double) 3 = (int) 3.0 = 3
+	  Stampa: 3
++  6.	f(-100) = -100*f(-101) = (-100)*(-101)*f(-102) = ...
+	  Non stampa niente perché va in stack overflow
++  7. Riga2: assegnamento non valido poiché le strutture non sono dello stesso tipo
++  8. Riga7: L'indice x per selezionare un elemento dall'array è decimale e non di tipo intero
++  9.	A[5][1] = {{1},{2},{3},{4},{5}} --> A00 1  A01 2  A02 3  A03 4  A04 5
+		p[1][0] = *(p[1]+0) = *(*(p+1*2)) = *(*A+2) = A[0][2] ok = 3
+		q[1][2] = *(q[1]+2) = *(*(q+1)+2) = *(*(p+1*4)+2)
+				= *(*(p+4)+2) = *(*(A+0)+6) = A[0][6] NO_OK = A[1][1] = ??
+	  Stampa: 3 N.D.
++ 10.	p = {'C','i','a','o','\0'};
+			(*r)[3] = r[0][3] = p[3] = 'o'
+			Visto che *r = p
+		p = {'C','i','a','\0','\0'};
+	  Stampa: Cia
+
+Esame 01_02_2017
++  1.	int main()
+		{
+			int 7hr33 = '\0'+3;
+			int f0ur  = 'A'/16;
+			int f1v3  = sizeof(char)*5;
+		}
+	  Riga7: indentificatore '7hr33' non valido
+			 I nomi delle variabili non possono iniziare con un numero
++  2. Stampa: 0 1
++  3.	!x ritorna 0 o 1 (non specificabile esattamente) --> (!x) > 100) always false
+	  Stampa: 0
++  4.	while(3 x=2 || N.C.) V
+			printf(x) (3)
+		while(2 x=1 || N.C.) V
+			printf(x) (2)
+		while(1 x=0 || N.C.) V
+			printf(x) (1)
+		while(0 x=-1 || x=0 0) F
+	  Stampa: 2 1 0
++  5. Stampa: 0 0
++  6.	s = {'A','v','e',',','E','v','a','\0'};
+			f(&s[0], n=7)
+				k = 7, (7>7/2)V i=2*7-7-1 = 6
+			f(&s[1], 7)
+				k = 6, (7>7/2)V i=2*6-7-1 = 4
+			f(&s[2], 7)
+				k = 5, (5>7/2)V i=2*5-7-1 = 2
+			f(&s[3], 7)
+				k = 4, (4>7/2)V i=2*4-7-1 = 0
+			f(&s[4], 7)
+				k = 3, (3>7/2)F RIT niente
+		scambi tra p[0] e p[i]
+		i=0				p[0]
+						  |
+			{'A','v','e',',','E','v','a','\0'};
+						 +>+
+		i=2			p[0]	p[2]
+					  |		  |
+			{'A','v','e',',','E','v','a','\0'};
+					  +--->---+
+		i=4		p[0]			p[4]
+				  |				  |
+			{'A','v','E',',','e','v','a','\0'};
+				  +---->----->----+
+		i=6	p[0]					 p[6]
+			  |						  |
+			{'a','v','E',',','e','v','A','\0'};
+			  +------->------->-------+
+	  Stampa: avE,evA
+-  7. Riga3: z non è il nome di una variabile bensì un tipo di dato enumerativo vuoto, perciò non è assegnabile.
++  8.	s = {'A','v','e',',','E','v','a','\0'};
+			f(&s[0], n=7)
+				strlen(p) = 7, 7>7/2 V p++
+				strlen(p) = 6, 6>7/2 V p++
+				strlen(p) = 5, 5>7/2 V p++
+				strlen(p) = 4, 4>7/2 V p++
+				strlen(p) = 3, 3>7/2 F
+	  Stampa: 3
++  9.	f(x) = f(1) x+=1 x=2+1=3 RIT &(x locale)
+	  Stampa: 1 3
++ 10.	a|'a'|    b|'b'|
+		(p) --> a| |
+		[q] --> (p)
+		{r} --> [q]
+
+		*q = &b							[q] --> (p) = &b| |
+		**r = **(&q) = *q = *(&p) = p   (p) --> b|'c'|
+	  Stampa: a c
+
+Esame 14_02_2017
++  1.	int x;
+		int y;
+		i = 2;
+	  Riga9: identificatore i sconosciuto
++  2.	(x,y,z)(0,0,0)
+		x += 1 + (y += 1 + (z += 1))
+		x += 1 + (y += 1 + (z = z+1))	(0,0,0)
+
+		x += 1 + (y += 1 + 1)
+		x += 1 + (y += 2)				(0,0,1)
+
+		x += 1 + (y = y+2)
+		x += 1 + 2						(0,2,1)
+
+		x += 3							(3,2,1)
+	  Stampa: 3 2 1
++  3.	!x = 1 -> esegue il ramo true del costrutto di selezione if
+	  Stampa: 0
++  4.	while(3 x=2 && x=3 3) V <--+
+			printf(x) (3)		   |
+		while(3 x=2 && x=3 3) V    |
+			printf(x) (3)		---+
+	  Stampa in loop: 3
++  5. Stampa: 0 0.5
++  6.	s = {'A','v','e',',','E','v','a','\0'};
+		f(&s[0]) ---------------------------------
+			(7>3)V - scambio tra p[0] e p[3]
+			p[0]		p[3]
+			  |			  |
+			{',','v','e','A','E','v','a','\0'};
+			  +--->--->---+
+		f(&s[1]) ---------------------------------
+			(6>3)V - scambio tra p[1] e p[4]
+				p[1]		p[4]
+				  |			  |
+			{',','E','e','A','v','v','a','\0'};
+				  +--->--->---+
+		f(&s[2]) ---------------------------------
+			(5>3)V - scambio tra p[2] e p[5]
+					p[2]		p[5]
+					  |			  |
+			{',','E','v','A','v','e','a','\0'};
+					  +--->--->---+
+		f(&s[3]) ---------------------------------
+			(4>3)V - scambio tra p[3] e p[6]
+						p[3]		p[6]
+						  |			  |
+			{',','E','v','a','v','e','A','\0'};
+						  +--->--->---+
+		f(&s[4])
+			(3>3)F RIT niente
+	  Stampa: ,EvaveA
++  7. Riga3: mancano le parentesi graffe prima di z
++  8.	s = {'A','v','e',',','E','v','a','\0'};
+		(int)sizeof(s) = 8*sizeof(char) = 8
+		(int)strlen(s) = 7
+	  Stampa: 8 7
+-  9.	s = {'A','v','e',',','E','v','a','\0'};
+		(int)(q-p) = (int)(&s[8]-&s[0]) = 8 (distanza tra le celle)
+	  Stampa: 8 E
+- 10.	(n) --> | |    x|0|
+			[p] = [&n] --> (n)
+			(q) = (&x) --> x|0|
+
+			(r) = (q) --> x|0|
+			[p] = [&r] --> (r) puntatore locale
+
+			**p = **(&r) = *r = *q = *(&x) = x = 1
+		*n = *r ???
+		x|1|  (n) --> |1|            +-->--+
+			+--> p| | --> ?		+-----+--> x|0|
+			|					|	 ¦|
+			p( )				q( ) +r( )
+			¦						 ¦
+			+-------->------->-------+
+	  Stampa: 1 N.D.
+
+Esame 12_06_2017
++  1.	M(x,y,z) (x * y * z)
+		M(1+2,1+2,1+2) --> (1+2*1+2*1+2) = (1+2+2+2) = 7
+	  Stampa: 7
++  2.	(x,y,z)(0,0,0)
+		x += 2 + (y += 2 + (z += 2))
+		x += 2 + (y += 2 + (z = z+2))	(0,0,0)
+
+		x += 2 + (y += 2 + 2)
+		x += 2 + (y += 4)				(0,0,2)
+
+		x += 2 + (y = y+4)
+		x += 2 + 4						(0,4,2)
+
+		x += 6							(6,4,2)
+	  Stampa: 6 4 2
+-  3.	(x+100 = 1)(!(1) == 0)(0 == 0) ramo vero
+		!(-99) = !(V) = F = 0
+	  Stampa: 0
++  4. Riga5: i parametri del costrutto for devono essere separati da ;
++  5. Riga3: le funzioni non possono ritornare array
++  6.	f(10) = f(9) = f(8) = f(7) = f(6) = f(5) = f(4) = f(3) = f(2) = f(1) = f(0) = f(1) = f(0) ...
+	  Non stampa niente poiché è in ricorsione infinita, quinda va in stack overflow
++  7.	(A,B,C,D)(-3,-2,-1,0) --> A+B+C+D = -3-2-1-0 = -6
+	  Stampa: -6
++  8.	s = {'A','v','e',',','E','v','a','\0'};
+		(int)sizeof(s) = 8*sizeof(char) = 8
+		(int)strlen(s) = 7
+	  Stampa: 8 7
++  9.	A[2][3] = {{0,1,2},{3,4,5}} --> A00 0  A01 1  A02 2  A10 3  A11 4  A12 5
+		p[1][1] = *(p[1]+1) = *(*(p+1*2)+1) = *(*A+3) = A[0][3] NO_OK = A[1][0] = 3
+		q[1][1] = *(q[1]+1) = *(*(q+1)+1) = *(*(p+1*3)+1)
+				= *(*(p+3)+1) = *(*(A+0)+4) = A[0][4] NO_OK = A[1][1] = 4
+	  Stampa: 3 4
++ 10. p punta alla variabile locale y che vale 4
+	  Stampa: N.D. (dangling pointer)
+
+Esame 03_07_2017
++  1.	M(x,y,z) (x / y / z)
+		M(1+2,1+2,1+2) --> (1+2/1+2/1+2) = (1+2+2+2) = 7
+	  Stampa: 7
++  2.	(x,y)(1,1)
+			(!(x * y) && x++)
+		!(1*1) --> (!1 && ...) --> (0 && N.C.) = (0)
+			(!(x * y) || x++)
+		!(1*1) --> (!1 || ...) --> (0 || 1 x=2) = (1)
+			x (2)
+	  Stampa: 0 1 2
++  3.	(x = 1)
+		switch(1) --> case 1 --> stampa x+1 = 1+1 = 2
+	  Stampa: 2
++  4.	for(begin;cond;incr) istr; 
+		begin cond |    istr        incr  cond | istr incr cond | ...
+		i=4 (i=4)V | (PRINT 4)(i=5) i=3 (i=3)V |
+					 (PRINT 3)(i=4) i=2 (i=2)V |
+					 (PRINT 2)(i=3) i=1 (i=1)V |
+					 (PRINT 1)(i=2) i=0 (i=0)F
+	  Stampa: 4 3 2 1
++  5.	RIT (int)(double)((char)(1.1)-1) = 
+		  = (int)(double)(1-1) = (int)(double)(0) = (int)(0.0) = 0
+	  Stampa: 0
++  6.	f(10) = f(9)+1 = f(8)+2 = f(7)+3 = f(6)+4 = f(5)+5
+			  = f(4)+6 = f(3)+7 = f(2)+8 = f(1)+9 = f(0)+10 = 0+10 = 10
+	  Stampa: 10
++  7. Riga2,3: il tipo di dato a è sconosciuto perché non è stato ancora definito
++  8. Riga7: l'assegnamento a riga7 non è valido, visto che non si può cambiare il valore di s (è un vettore)
++  9.	A[2][3] = {{0,1,2},{3,4,5}} --> A00 0  A01 1  A02 2  A10 3  A11 4  A12 5
+		p[1][1] = *(p[1]+1) = *(*(p+1*1)+1) = *(*A+2) = A[0][2] ok = 2
+		q[1][1] = *(q[1]+1) = *(*(q+1)+1) = *(*(p+1*4)+1)
+				= *(*(p+4)+1) = *(*(A+0)+5) = A[0][5] NO_OK = A[1][2] = 5
+	 Stampa: 2 5
++ 10.	 (p) --> |r|  r boh
+		[&p] --> (p)
+
+		 (q) --> | |
+		 (q) --> |r|
+
+		 (p) --> |1| RIT (p) --> |1|
+	  Stampa: 1
+
+Esame 04_09_2017
++  1.	int main()
+			{
+			int i;
+			for(i=0; i <= 10 ; i++);
+			{
+				printf("%d\n", i);
+			}
+		}
+	  Stampa: 11
++  2. Stampa: 0 1 0
++  3. Stampa: N.D.
++  4.	Riga11: ; dopo il while mancante
++  5. Stampa: 0 N.D.
++  6.	f(0) = f(1)+f(-1)+1
+		f(1)  = f(2)+ f(0)+1 = 
+		f(-1) = f(0)+f(-2)+1 = 
+	  La funzione non risolve tutte le chiamate, va in stack overflow
++  7. Riga2: assegnamento non valido poiché struct x e struct y sono di tipo diverso
++  8.	n = 4
+		p[1] = 'i' , p[3] = 'o'
+	  Stampa: io
++  9.	n = 4
+		*(p+4-1) = '\0' --> p[3] = '\0'
+		return p+1
+	  Stampa: ia
++ 10.	es10 == es9 con un livello di deferenziazione in più
+	  Stampa: ia
+
+Simulazione 20_12_2017
++  1.	FRAC(x,y) x*y/x*y
+		FRAC(1+1,1+1) = 1+1*1+1/1+1*1+1 = 1+1+1+1+1 = 5
+	  Stampa: 5
++  2. 	(x,y)(0,1)
+		(x=-1 -1 || N.C.)V && (x=-2 -2 && y=0 0)F (x,y)(-2,0)
+		(x=-3 -3 && y=-1 -1)V || N.C. V           (x,y)(-3,-1)
+	  Stampa: 0 1
++  3. Stampa: ia
++  4.	while(x=-1 -1) V
+		printf((x += 2)) (x=1)
+		while(x=0 0) F
+	  Stampa: 1
++  5. Riga2: ridefinizione della variabile A
++  6.	f(2)
+			f(0)
+				0
+			f(1)
+				1
+		2
+	  Stampa: 0 1 2
++  7. Riga2: tipo di dato A sconosciuto (non ancora definito)
++  8. Stampa: 5 4 4 N.D.
++  9. Stampa: N.D. N.D. (dangling pointers)
++ 10.	q[1][2] = *(q+1*5)[2] = *(*(p+ 5)+2) = **(p+ 7) = *(p[ 7])[0] = p[ 7][0] = 7
+		q[3][4] = *(q+3*5)[4] = *(*(p+15)+4) = **(p+19) = *(p[19])[0] = p[19][0] = 19
+	  Stampa: 7 19
+
+Esame 17_01_2018a
++  1.	M(x,y) (x = y);
+		M(y,x) (y = x); ok
+		M(2,x) (2 = x); ERR
+	  Riga7: Manca l'lvalue nell'assegnamento: impossibile assegnare una variaible ad una costante intera
++  2.	(x,y)(0,3)
+			(--x * --y) && (--x / --y)
+		(x=-1 -1 * y=2 2) -2V && (x=-2 -2 / y=1 1) --> (-2 && -2) = V (x,y)(-2,1)
+			(x++ / y++) || (x++ * y++)
+		(-2 x=-1 / 2 y=2) -1V || (N.C.) --> (x,y)(-1,2)
+	  Stampa: 1 1
++  3.	(x = 1) true
+		!x + 2 = !1+2 = 0+2 = 2
+	  Stampa: 2
++  4.	x = 0
+		if(--x == 1) --> x=-1 (-1 == 1) F
+		while(x++) --> -1 x=0 V (ritorna alla cond. iniziale)
+	  Non stampa niente perché il ciclo do-while non termina
++  5. Riga3: F è una variabile (essa nasconde la funzione F) e non una funzione, quindi la chiamata è illegale
++  6.	f(5) = f(4) = f(3) = 1+f(2) = 2+f(1) = 3+f(0) = 3+0 = 3
+	  Stampa: 3
++  7.	(A,B,C,D)(-1,0,2,3)
+		(A,B,C,D)(0,0,1,3) --> A+B+C+D = 0+0+1+3 = 4
+	  Stampa: 4
++  8.	sizeof(A) = 2*3 * sizeof(char) = 6 * 1 = 6
+		sizeof(B) =   6 * sizeof(char) = 6 * 1 = 6
+	  Stampa: 6 1
++  9.	A[2][2][2] = {{{1,0},{2,0}},{{3,0},{4,0}}};
+		A[1] = {{3,0},{4,0}}
+		A[1][1] = {4,0}
+		A[1][1][0] = 4
+		A[1][1][1] = 0
+	  Stampa: 4 0
++ 10.	 (p1) ---> x|0|
+		 (p2) --'  y|1|
+
+		 [q1] ---> (p1)					**q1 = *p1 = x
+		 [q2] ---> (p2)					*p2 = y
+
+		 *[q2] = (p2) ---> y|1|
+	  Stampa: 0 1
+
+Esame 17_01_2018b
++  1.	M(x,y) (x = y);
+		M(y,x) (y = x); ok
+		M(1,x) (1 = x); ERR
+	  Riga7: Manca l'lvalue nell'assegnamento: impossibile assegnare una variaible ad una costante intera
++  2.	(x,y)(3,0)
+			(--x * --y) && (--x / --y)
+		(x=2 2 * y=-1 -1) -2V && (x=1 1 / y=-2 -2) --> (-2 && 0) = F (x,y)(1,-2)
+			(x++ / y++) || (x++ * y++)
+		(1 x=2 / -2 y=-1) 0F || (2 x=3 * -1 y=0) -2V --> (x,y)(3,0)
+	  Stampa: 0 1
++  3.	(x = 2) true
+		!x + 1 = !1+1 = 0+1 = 1
+	  Stampa: 1
++  4.	x = 1
+		if(--x == 1) --> x=0 (0 == 1) F
+		while(x++) --> 0 F x=1
+	  Stampa: 1
++  5. Riga3: F è una variabile (parametro della funzione F) e non una funzione, quindi la chiamata è illegale
++  6.	f(-5) = f(-4) = f(-3) = 1+f(-4) = 1+f(-3) = 1+f(-4)...
+	  Va in ricorsione infinita, quindi in stack overflow
++  7.	(A,B,C,D)(1,2,-2,-1)
+		(A,B,C,D)(0,2,1,-1) --> A+B+C+D = 0+2+1-1 = 2
+	  Stampa: 2
++  8.	sizeof(A) = 3*2*sizeof(char) = 6 * 1 = 6
+		sizeof(B) =   5*sizeof(char) = 5 * 1 = 5
+	  Stampa: 6 0
++  9.	A[2][2][2] = {{{1,0},{2,0}},{{3,0},{4,0}}};
+		A[0] = {{1,0},{2,0}}
+		A[0][1] = {2,0}
+		A[0][1][0] = 2
+		A[0][1][1] = 0
+	  Stampa: 2 0
++ 10.	 (p1) ---> x|1|
+		 (p2) --'  y|0|
+
+		 [q1] ---> (p1)					**q1 = *p1 = x
+		 [q2] ---> (p2)					*p2 = y
+
+		 *[q2] = (p2) ---> y|0|
+	  Stampa: 1 0
+
+Esame 02_02_2018a
++  1.	1_MACRO(x,y) (x = 1); ok
+		Y_MACRO(y,x) (y = x); ok
+	  Riga7: I nomi delle macro non possono iniziare con un numero
++  2.	(x,y)(1.0,1.0)
+			!((int)x-- / 2) && y++
+			!(((int)1.0)-- / 2) && 1.0 (y=2.0)
+			!((1)-- / 2) && 1.0 (y=2.0)
+			!(1 / 2 x=0.0) && 1.0 (y=2.0)
+			!(0 x=0.0) && 1.0 (y=2.0)
+			1 x=0.0 && 1.0 (y=2.0) V
+		(x,y)(0.0,2.0)
+			(x++ || (y -= 2) || x++)
+			(0.0 x=1.0 || y=y-2,y=0.0 || 1.0 x=2.0) V
+		(x,y)(2.0,0.0)
+	  Stampa: 1 1
++  3.	(x != 1) false
+		MAX = 1 , stampa( MAX ) ------------------> stampa(1)
+		MAX = 0 , stampa(MAX+1) --> stampa(0+1) --> stampa(1)
+	  Stampa: 1 1
++  4.	for(begin;cond;incr) istr; 
+			begin cond |    istr    incr cond | istr incr cond | ...
+		i=0 i+3!=0 (3!=0)V | (i= 0)(PRINT -2) i=-1 (-1+3!=0)(2!=0)V |
+							 (i=-1)(PRINT -3) i=-2 (-2+3!=0)(1!=0)V |
+	  Stampa: -2 -3 -4		 (i=-2)(PRINT -4) i=-3 (-3+3!=0)(0!=0)F
++  5. Riga8: Il prototipo definito precedentemente non corrisponde alla firma della funzione
+-  6.	f(2)
+			Stampa: 2 (x=1)
+			Stampa:	f(1)
+			 |		Stampa: (1 x=0) ------+
+			 |		Stampa: f(0)           \
+			 |       +----: RIT (x=-1 -1)  /
+			 +----:	RIT (x=-1 -1) <-------+
+		RIT 1
+	  Stampa: 2 1 -1 -1
++  7.	(X,Y,Z)(0,1,2)
+		double Y = (double)(int)1.2 = (double)1 = 1.0
+	  Stampa: 1.0
++  8.	(x)(20.0)
+		sizeof(20.0) == sizeof(x) true
+		sizeof(  20) == sizeof(x) false
+	  Stampa: 1 0
+-  9.	A[] = {1, 2, 3, 4};
+		(A[3])[p] = (4)[p] = *(4+p) = *(4+A) = A[4]
+		(p[1])[A] = *(p+1)[A] = *(A+1)[A] = (A[1])[A] = (2)[A] = *(2+A) = A[2] = 3
+	  Stampa: N.D. 3
++ 10.	 (A[0]) ---> x|1|
+		 (A[1]) ---> y|2|
+		 (A[2]) ---> z|3|
+		 [p]  ---> (A)
+			**p = *p[0] = *A[0] = *(&x) = x = 1
+			p[1][0] = *(p[1]+0) = *p[1] = *A[1] = *(&y) = y = 2
+			*p[2] = *A[2] = *(&z) = z = 3
+	  Stampa: 1 2 3
+
+Esame 02_02_2018b
++  1.	Y_MACRO(y,x) (y = x); ok
+		2_MACRO(x,y) (x = 2); ok
+	  Riga7: I nomi delle macro non possono iniziare con un numero
++  2.	(x,y)(0.0,0.0)
+			!((int)x-- / 2) && y++
+			!(((int)0.0)-- / 2) && 0.0 (y=1.0)
+			!((0)-- / 2) && 0.0 (y=1.0)
+			!(0 / 2 x=-1.0) && 0.0 (y=1.0)
+			!(0 x=-1.0) && 0.0 (y=1.0)
+			1 x=-1.0 && 0.0 (y=1.0) F
+		(x,y)(-1.0,1.0)
+			(x++ || (y -= 2) || x++)
+			(-1.0 x=0.0 || N.C.) V
+		(x,y)(0.0,1.0)
+	  Stampa: 0 1
++  3.	(x != 0) false
+		MAX =  0 , stampa(MAX+1) --> stampa( 0+1) --> stampa(1)
+		MAX = -1 , stampa(MAX+1) --> stampa(-1+1) --> stampa(0)
+	  Stampa: 1 0
++  4.	for(begin;cond;incr) istr; 
+			begin cond |    istr    incr cond | istr incr cond | ...
+		i=0 i-3!=0 (-3!=0)V | (i=0)(PRINT 2) i=1 (1-3!=0)(-2!=0)V |
+							  (i=1)(PRINT 3) i=2 (2-3!=0)(-1!=0)V |
+	  Stampa: 2 3 4			  (i=2)(PRINT 4) i=3 (3-3!=0)( 0!=0)F
++  5. Riga8: Il prototipo definito precedentemente non corrisponde alla firma della funzione
++  6.	f(-2)
+			Stampa: -2 (x=-1)
+			Stampa:	f(-1)
+			 |		Stampa: (-1 x=0) ----+
+			 |		Stampa: f(0)          \
+			 |       +----: RIT (x=1 1)   /
+			 +----:	RIT (x=1 1) <--------+
+		RIT 1
+	  Stampa: -2 -1 1 1
++  7.	(X,Y,Z)(0,1,2)
+		double Y = (double)(int)2.1 = (double)2 = 2.0
+	  Stampa: 2.0
++  8.	(x)(20)
+		sizeof(20.0) == sizeof(x) false
+		sizeof(  20) == sizeof(x) true
+	  Stampa: 0 1
++  9.	A[] = {1, 2, 3, 4};
+		(A[1])[p] = (2)[p] = *(2+p) = *(A+2) = A[2] = 3
+		(p[3])[A] = *(p+3)[A] = *(A+3)[A] = (A[3])[A] = (4)[A] = *(A+4) = A[4]
+	  Stampa: 3 N.D.
++ 10.	 (A[0]) ---> x|1|
+		 (A[1]) ---> y|2|
+		 (A[2]) ---> z|3|
+		 [p]  ---> (A)
+			p[2][0] = *(p[2]+0) = *p[2] = *A[2] = *(&z) = z = 3
+			*p[1] = *A[1] = *(&y) = y = 2
+			p[0][0] = *(p[0]+0) = *p[0] = *A[0] = *(&x) = x = 1
+	  Stampa: 3 2 1
+
+Esame 12_02_2018
++  1.	M(2+0,1+0) = (2+0/1+0+2+0*1+0) = 2+0+0+2+0+0 = 4
+		M(0+2,0+1) = (0+2/0+1+0+2*0+1) = 0+ZERO_DIV+1+0+0+1 = EXCEPTION_DIV_BY_ZERO
+	  Stampa: 4 N.D.
++  2.	(x,y)(0,1)
+		(0 x=1 || 1 x=0 || N.C.) 1 (x,y)(0,1)
+		(1 y=0 && 0 y=1 && N.C.) 0 (x,y)(0,1)
+	  Stampa: 1 0
+-  3. Riga10: Z non è una costante intera ma una variabile
++  4.	(i,j)(0,0)
+			for(begin;cond;incr) istr; 
+			begin cond | istr incr cond | istr incr cond | ...
+		(0,0) (PRINT 0) i+j+2 = 2 V | (-2,1) (PRINT -1) i+j+2 = 1 V | (-4,2) (PRINT -2) i+j+2 = 0 F
+	  Stampa: 0 -1 -2
++  5. Stampa: N.D. N.D. N.D. (L’ordine di valutazione degli argomenti di una funzione è non specificato)
+-  6.	f(-2)
+			f(-1)
+				f(0) RIT 1;
+			stampa f(0) = 1
+			stampa -1 (x=0)
+			RIT 1 (x=1)
+		stampa f(-1) = 1
+		stampa -2 (x=-1)
+		RIT 0 (x=0)
+	  Stampa: 1 -1 1 -2
++  7. Riga4: conflitto di nomi tra la funzione principale main() e la variabile di tipo intero main definita a riga2
++  8.	sizeof(a)/sizeof(a[3]) = 8/2 = 4	  (i,x)(0,1)
+			x *= a[i++];  x *= a[0];  x*= 1;  (i,x)(1,1)
+			x *= a[i++];  x *= a[1];  x*= 2;  (i,x)(2,2)
+			x *= a[i++];  x *= a[2];  x*= 3;  (i,x)(3,6)
+			x *= a[i++];  x *= a[3];  x*= 4;  (i,x)(4,24)
+	  Stampa: 4 24
++  9.	*f() dangling pointer
+	  Stampa: N.D. 1
+- 10.	f(&p) --> p = NULL non stampa
+		g(&p) --> p punta ad una variabile di tipo intero allocata dinamicamente e che vale 0
+		*p = 0
+	  Stampa: 0
+
+Esame 14_06_2018
++  1.	M(x,y) --> (y = x); 
+		M(x,y) --> (2 = x);
+	  Riga7: il lvalue dell'assegnamento non può essere una costante
++  2.	(x,y)(2,0)
+		(x=1 1 * y=-1 -1)[-1V (x,y)(1,-1)] && (x=0 0 / y=-2 -2) 0 F (x,y)(0,-2)
+		(0 x=1 / -2 y=-1)[ 0F (x,y)(1,-1)] || (1 x=2 * -1 y=0) -1 V (x,y)(2,0)
+	  Stampa: 0 1
++  3.	x = 1 RIT 1 V --> !x + 1 = 0+1 = 1
+	  Stampa: 1
++  4.	i=0 (0)
+			for(begin;cond;incr) istr; 
+			begin cond | istr incr cond | istr incr cond | ...
+		i+4 = 4 V | (0) (PRINT -3)(i=-3) (-2) i+4 = 2 V | (-2) (PRINT -5)(i=-5) (-4) i+4 = 0 F
+	  Stampa: -3 -5
++  5. Riga4: prototipo di f discordante con il tipo di ritorno e/o i paramentri formali della funzione dichiarata a riga8
++  6.	f(2)
+			x=0
+			f(0) RIT -1
+		RIT -1 (x=-1)
+	  Stampa: 0 -1
++  7.	float Y = (char)1.2 = 1
+	  Stampa: 1.0
++  8.	sizeof(a)/sizeof(a[1]) = 8/2 = 4	  (i,x)(0,0)
+			x += a[i++];  x += a[0];  x+= 1;  (i,x)(1,1)
+			x += a[i++];  x += a[1];  x+= 2;  (i,x)(2,3)
+			x += a[i++];  x += a[2];  x+= 3;  (i,x)(3,6)
+			x += a[i++];  x += a[3];  x+= 4;  (i,x)(4,10)
+	  Stampa: 4 10
++  9.	*g() dangling pointer
+	  Stampa: 0 N.D.
+- 10.	(x,y)(1,0)			(x,y)(1,0)
+		(p1,p2)(&y,&y)		(p1,p2)(&y,&x)
+		(q1,q2)(&p1,&p2)	(q1,q2)(&p1,&p2)
+		**q1 = **(&p1) = *p1 = *(&y) = y = 0
+		*p2 = *(&x) = x = 1
+	  Stampa: 0 1
+
+Esame 09_07_2018
++  1.	M(3+0,2+0) = (3+0/2+0+3+0*2+0) = (3+0+0+3+0+0) = 6
+		M(0+3,0+2) = (0+3/0+2+0+3*0+2) = (0+DIVBYZERO+2+0+0+2) = EXCEPTION_DIV_BY_ZERO
+	  Stampa: 6 N.D.
++  2.	(x = 0)
+		(0 x=1 || 1 x=0 || N.C.) 1 (x = 0)
+		(0 x=-1 && N.C.) 0 (x = -1)
+	  Stampa: 1 0
++  3. Riga10: Z non è una costante intera ma una variabile
+-  4.	x = 1
+		if(--x == 1) --> x=0 (0 == 1) F
+		while(x++) --> 0 x=1 F
+	  Stampa: 1
+-  5. WR: Riga2: conflitto di nomi tra la funzione X e la variabile locale X
+	  CR: Riga3: X è una variabile, non una funzione e né un puntatore a funzione
++  6.	f(2) = 1+f(1) = 1+1+f(0) = 2+0 = 2
+	  Stampa: 2
++  7.	A = -2 | B = -1 | C = 2 | D = 3
+		A =  0 | B = -1 | C = 1 | D = 3
+		A+B+C+D = 0-1+1+3 = 3
+	  Stampa: 3
++  8.	sizeof(A) = 9*sizeof(char) = 9
+		sizeof(B) = 6*sizeof(char) = 6 
+	  Stampa: 9 0
++  9.	A[2] = 3 --> p[A[2]] = p[3] = *(p+3) = *(A+3) = A[3] = 4
+		p[1] = *(p+1) = *(A+1) = A[1] = 2 --> A[p[1]] = A[2] = 3
+	  Stampa: 4 3
++ 10.	p -->	A[0] = &x --> x| -1 |
+				A[1] = &y --> y| -2 |
+				A[2] = &z --> z| -3 |
+		**p+1 = (**p)+1 = (*A[0])+1 = *(&x)+1 = x+1 = 0 
+			Formula: A[i][j] = (*(A+i))[j] = *(*(A+i)+j)
+		p[1][0]+1 = (*(p+1))[0]+1 = *(*(p+1)+0)+1 = *(p[1]+0)+1 = *(A[1])+1 = = *(&y)+1 = y+1 = -2+1 = -1
+		*p[2]+1 = *(*(p+2))+1 = *(A[2])+1 = *(&z)+1 = z+1 = -3+1 = -2
+	  Stampa: 0 -1 -2
+
+Esame 06_09_2018
++  1. Riga8: Il nome della macro inizia con un numero
++  2.	(x,y)(-1.0,0.0)
+		!(-1/2 -->0 x=0 && N.C.) !0 1
+		(0 x=1 || 0 || x=0 0) 0 (x=0)
+	  Stampa: 1 0
++  3.	MAX=1
+	  Stampa: 1 2
++  4.	(i,j)(0,0)
+			for(begin;cond;incr) istr; 
+			begin cond | istr incr cond | istr incr cond | ...
+		(0,0) (PRINT 0) i+j+1 = 1 V | (-1,1) (PRINT 0) i+j+1 = 1 V | (-2,2) (PRINT 0) i+j+2 = 1 V ...
+	  Stampa il loop: 0
++  5. Stampa: N.D. N.D. N.D. (L’ordine di valutazione degli argomenti di una funzione è non specificato)
+-  6.	f(1)
+			print(f(0)) --> f(0) RIT 0 --> print(0)
+			print(f(0)) --> f(0) RIT 0 --> print(0)
+		RIT 1
+	  Stampa: 0 0 1
++  7. Riga: main non è una funzione bensì una variabile locale, che nasconde il nome della funzione
++  8.	sizeof(0) = 2
+		sizeof(x) = 1
+		sizeof(0.0) = 4
+	  Stampa: 0 0
++  9.	A[2][2][2] = {  {  {1}  ,  {2}  }  ,  {  {3}  ,  {4}  }  }
+		A[2][2][2] = {  { {1,0} , {2,0} }  ,  { {3,0} , {4,0} }  }
+						---------------       -----------------
+		A[0][1][0] = 2			  ----          -----
+		A[1][0][1] = 0			   |               |
+	  Stampa: 2 0
++ 10.	&p indirizzo della cella di memoria che contiene un puntatore p non inizializzato
+		f(&p) --> p punta ad una variabile di tipo intero allocata dinamicamente
+				  p punta a NULL
+		g(&p) --> p punta ad una variabile di tipo intero allocata dinamicamente e che vale 0
+		*p = 0
+	  Stampa: 0
+
+Simulazione 19_12_2018
++  1.	(x = 0)
+		M(1+2,x) = (y = x*y/x) - 1
+		y = M(1+2,x) = (x = 1+2*x/1+2) - 1
+		  = (x = 3+2*x)-1
+		(x,y)(3,2)
+	  Stampa: 3 2
++  2.	(x,y,z)(1,2,3)
+		x += y += z += 1;
+		z += 1; y += z; x += y;
+		(1,2,4) (1,6,4) (7,6,4)
+	  Stampa: 7 6 4
++  3.	(x,y)(1,0)
+		sizeof(x) = 2 (2>2) F
+		if(--x) --> if(x=0 0) F --> else
+		(x,y)(0,0)
+	  Stampa: 0
++  4.	(x,y)(0,1)
+		(x)(0)F --> while(++x && y--)
+		while(x=1 1 && 1 y=0) V (x,y)(1,0)
+
+		(x)(1)V --> while(x-- && ++y)
+		while(1 x=0 && y=1 1) V (x,y)(0,1)
+	  Stampa in loop: 1 0\n 0 1\n
++  5.	Perdita di dati nella conversione di 256.0 a unsigned char
+	  Stampa: N.D. 
+-  6. WR: Riga1: conflitto di identificatori tra il nome della funzione e quello del suo parametro
+	  CR: Riga5: f non è una funzione bensì una variabile locale (parametro locale)
++  7. Riga2: conflitto di identificatori tra la costante enumerativa A e il tipo di dato A di tipo enum A 
++  8.	sizeof(s) = 6*sizeof(char) = 6
+		strlen(s) = 5 
+	  Stampa: 0 5
++  9.	(x,y)(0,1)
+		(p,q)(&x,&y) --> *p = *q --> x = y --> (x,y)(1,1)
+		(p == q F)(*p == *q V)
+	  Stampa: 0 1
++ 10.	(x,*p)(1,boh)
+			(**p,*q)(&p,&x)
+			*p = q --> p = &x
+			**p = 0 --> x = 0
+		(x,*p)(0,&x)
+	  Stampa: 0 0
+
+Esame 10_01_2019
++  1.	N(0) = M(0+2) = 0+2 * 0+2 = 0 + 2*0 +2 = 2
+		N(1) = M(1+2) = 1+2 * 1+2 = 1 + 2*1 +2 = 1+2+2 = 5
+	  Stampa: 2 5
++  2.	x/y = 0 F --> x = y++; (x,y)(-2,-1)
+		y/x = 0 F --> y = x++; (x,y)(-1,-2)
+	  Stampa: -1 -2
++  3.	(x,y)(-1,-2)
+		x/y = 0 F --> x = y++; (x,y)(-2,-1) x=-2 V
+		y/x = 0 F --> y = x++; (x,y)(-1,-2) y=-2 V 
+	  Stampa: -1 -2
++  4.	(x,y)(-1,-2)
+		while(x/y = 0 F --> x = y++; (x,y)(-2,-1) x=-2) V
+		y/x = 0 F --> y = x++; (x,y)(-1,-2) y=-2 V
+	  Stampa in loop: -1 -2\n
++  5. Stampa: N.D. N.D.
+		(L'ordine di valutazione dei parametri di una funzione non si può sapere a priori)
++  6.	f(4) = f(f(3)) = f(2) = 1
+	  Stampa: 1
++  7. Riga3: impossibile assegnare A al tipo generico enum z
++  8. Riga6: assegnamento non valido, non si può modificare l'indirizzo di memoria della variabile array S2
++  9. Stampa: a1 a2
+- 10. p[0] = *(p+0) = *p
+	  Stampa: a1 N.D. (il tipo di q non è compatibile con &S2)
+
+Esame 29_01_2019
++  1.	(x,y,z)(0,0,0)
+		PRE_INCR(x-1) * PRE_INCR(y+2) = ++x-1 * ++y+2
+		= ++x - ++y + 2 = (x=1 1 - y=1 1 +2) = 1-1+2 = 0+2 = 2
+		(x,y,z)(1,1,0)
+		POST_DECR(2+y) * POST_DECR(z) = 2+y-- * z--
+		= 2+y-- * z-- = 2+(y*z) (y--,z--) = 2 + 0 * -1 = 2
+		(x,y,z)(1,0,-1)
+	  Stampa: 2 2
++  2.	(x,y,z)(-1,2,0)
+		++x && ++y
+		x=0 0 && N.C.	(x,y,z)(0,2,0) 0
+		y-- && z--
+		2 y=1 && 0 z=-1 (x,y,z)(0,1,-1) 0
+	  Stampa: 0 0
++  3.	(x,y,z)(-1,2,0)
+		if((++x && ++y) || (y-- && z--))
+		(x=0 0 && N.C) 0 || (2 y=1 && 0 z=-1) F
+		(x,y,z)(0,1,-1) --> (--x,--y,--z)(-1,0,-2)
+	  Stampa: -1 0 -2
++  4.	(x,y,z)(-1,2,0)
+		while(!((++x && ++y) || (y-- && z--)))
+		| (++x && ++y) || (y-- && z--)
+		| (x=0 0 && N.C.) || (2 y=1 && 0 z=-1) !F = V
+		(x,y,z)(0,1,-1)
+		| (++x && ++y) || (y-- && z--)
+		| (x=1 1 && y=2 2) || N.C. !V = F
+		(x,y,z)(1,2,-1)
+	  Stampa: 1 2 -1\n
++  5. Riga2: conflitto di nomi tra variabile di tipo struct x e il paramentro passato x di tipo intero
++  6.	f(3,10,0) = f(3,7,1) = f(3,4,2) = f(3,1,3) = f(3,-2,4) = 4
+	  Stampa: 4
+-  7. Riga2: tipo sconosciuto x
++  8. 	*(s+5) = s[5] = 'g'
+		*(s+3) = s[3] = 'i'
+		*s     = s[0] = 'S'
+	  Stampa: giS
++  9.	String
+		|||||| <--
+	  Stampa: gnirtS
++ 10.	gnitrS		\n
+		|||||| <--	 | <--
+	  Stampa: gnirtS
+
+Esame 12_02_2019
++  1.	FOR(10,20)
+			{int i = 0; for(i=10; i<=20; i++);}
+		printf("d\n", i);
+	  Riga7: variabile i non definita
++  2. (!x) = 1 0
+	  Stampa: N.D. 0 1
++  3.	1000|2 r0    12
+		 500|2 r0    128 +
+		 250|2 r0     64 +
+		 125|2 r1     32 +
+		  62|2 r0      8 = 
+		  31|2 r1  --------
+		  15|2 r1    332
+		   7|2 r1
+		   3|2 r1
+		   1|2 r1
+		   0|
+		1000 = 11 1110 1000
+		(char)1000 = 1110 1000 = 2^7 + 2^6 + 2^5 + 2^3 = 128+64+32+8 = 332
+		!(char)1000 = 0 > -1.0 V
+		(x,y,z)(0.0,0.1,-1.0) --> (1.0,1.1,0.0)
+	  Stampa: 1 1 0
++  4.	(x,y,z)(0.0,0.1,-1.0)
+		while(!(char)1000 > z) --> (0 > -1) V
+		V |(++x,++y,++z)(1.0,1.0,0.0)(1,1,0)
+		  |		while(!(char)1000 > z) --> (0 > 0) F
+	 	  | Stampa: 1 1 0\n
+        --+------------------------------------
+		F | Caso (!(char)1000 <= -1.0) 
+		  | Esce dal ciclo e non stampa niente
++  5.	(char)255 = 0 1111 1111
+		(char)256 = 1 0000 0000 = 0000 0000 = 0
+		(!f(255) > 255, !f(255) > -255)(F,V)
+	  Stampa: 0 1
++  6.	f(10) = f(9)+f(8)+f(7)
+		f(9) = f(8)+f(7)+f(6)
+		f(8) = f(7)+f(6)+f(5)
+		f(7) = f(6)+f(5)+f(4)
+		f(6) = f(5)+f(4)+f(3)
+		f(5) = f(4)+f(3)+f(2)
+		f(4) = f(3)+f(2)+f(1)
+		f(3) = f(2)+f(1)+f(0)
+		f(2) = f(1)+f(0)+f(-1)
+		f(1) = f(0)+f(-1)+f(-2)
+
+		f(100) = 0
+	  Stampa: 0 0
++  7. Stampa: 1 0
++  8. 	(int)sizeof(s) = 6
+		(int)strlen(s) = N.D. (manca il carattere terminatore)
+		strcmp(s,"ciaone") =  = N.D. (manca il carattere terminatore)
+	  Stampa: 6 N.D. N.D.
++  9.	 s[s-s] = s[0] = 'c'
+		 *(s+2) = s[2] = 'a'
+		 2[s+2] = *(s+2+2) = *(s+4) = s[4] = 'n'
+			 ciaone
+		 --> | | |
+	  Stampa: can
++ 10.	p[0][0] = *(*(p+0)+0) = *(s+0) = s[0] = 'c'
+		p[0][1] = *(*(p+0)+1) = *(s+1) = s[1] = 'i'
+		p[0][2] = N.D. (tipi diversi)
+	  Stampa: ci N.D.
+
+Esame 12_06_2019
+-  1.	WHILE(10,20)
+			{int i = 10; while(i <= 20) i++;}
+		printf("d\n", i);
+	  Riga7: variabile i non definita
++  2.	x/y = -1 V --> x = y--; (x,y)(1,0)
+		y/x = 0 F  --> y = x++; (x,y)(2,1)
+	  Stampa: 2 1
++  3.	(x,y,z)(1,2,3)
+		if((++x && ++y && ++z) || (x-- && y-- && z--))
+		(x=2 2 && y=3 3 && z=4 4) || N.C. V
+		(x,y,z)(2,3,4) --> (++x,++y,++z)(3,4,5)
+	  Stampa: 3 4 5
++  4.	(x,y,z)(0.0,-1.0,-2.0)
+		while((!x) > z) --> (1 > -2) V
+		(x,y,z)(1.0,0.0,-1.0)
+			while((!x) > z) --> (0 > -1) V
+			(x,y,z)(2.0,1.0,0.0)
+				while((!x) > z) --> (0 > 0) F
+	  Stampa: 1 0 -1\n  2 1 0\n
++  5. Stampa: N.D. N.D.
+		(L'ordine di valutazione dei parametri di una funzione non si può sapere a priori)
++  6.	f(3,10,0) = f(3,3,1) = f(3,1,2) = f(3,0,3) = 3
+	  Stampa: 3
++  7. Riga6: il tipo di dato c non è compatibile con quello di a e b quindi l'assegnamento c = b non è valido
++  8. 	*(s+5) = s[5] = 'e'
+		*(s+3) = s[3] = 'o'
+		*s     = s[0] = 'c'
+	  Stampa: eoc
++  9.	 ciaone
+		 | | | <--
+	  Stampa: nac
++ 10.	p[0][1] = *(*(p+0)+1) = *(s+1) = s[1] = i
+		p[0][3] = *(*(p+0)+3) = *(s+3) = s[3] = o
+		p[1][0] = *(*(p+1)+0) = *(s+7) = s[7] = N.D.
+	  Stampa: io N.D.
+
+Esame 04_07_2019
++  1.	SQUARE(x-1) = x-1 * x-1
+		SQUARE(y-2) = y-2 * y-2
+		x-1 * x-1 * y-2 * y-2 = x - 1*x -1*y -2*y -2 = 0-3*y-2 = -3*4-2 = -12-2 = -14
+
+		SQRT(y) = sqrt(y) = sqrt(4) = 2.0
+		SQRT(y+5) = sqrt(y+5) = sqrt(9) = 3.0
+	  Stampa: -14 6
+-  2.	x/y = 0 F --> x = y++; (x,y)(2,3)
+		y/x = 1 V --> y = x--; (x,y)(1,2)
+	  Stampa: 1 2
++  3.	sizeof(char) > 1.1 --> 1 > 1 F
+		-0.9 0.1 1.1
+	  Stampa: 0 0 1
++  4.	int x = 0, y = -1, z = -2;
+		while(!((++x && ++y) || (y-- && z--))) x--;
+		((x=1 1 && y=0 0)F || (y=0 -1 N.C.))F --> V	(x,y,z)(1,-1,-2) x=0
+		(x,y,z)(0,-1,-2)
+	  Non stampa niente poiché non esce dal ciclo while
+-  5. Stampa: N.D. N.D.
+		(L'ordine di valutazione dei parametri di una funzione non si può sapere a priori)
++  6.	f(3) = f(2)+f(1)+f(0) = 3+1+1 = 5
+		f(2) = f(1)+f(0)+f(-1) = 1+1+1 = 3
+	  Stampa: 5
++  7. Riga4: tipo di dato x non conosciuto
++  8. Riga5: assegnamento non valido
++  9.	s[s-s] = s[0] = 'S' = *(s+s-s) = *(s+0)
+		*(s+2) = s[2] = 'r' | 2[s+2] = *(s+2+2) = *(s+4) = s[4] = 'n'
+	  Stampa: Srn
++ 10. Stampa: nrS
+
+Esame 12_09_2019
++  1.	PRE_INCR(x-1) * PRE_INCR(x+1) = ++x-1 * ++x+1  ok
+		POST_DECR(1-x) * POST_DECR(x+1) = 1-x-- * x+1-- NO OK: 1-- 
+	  Riga10: lvalue non valido (deve essere una variabile) per l'operatore unario --
++  2.	(x,y,z)(0,-1,-2)
+		(x=1 1 && y=0 0) F
+		(0 y=-1 && N.C.) F
+	  Stampa: 1 -1 -2
++  3.	(x,y,z)(0,-1,-2) vedi sopra
+		if(F) relativo else (x,y,z)(1,0,-2)
+		(x-1,y-1,z)(0,-1,-2)
+	  Stampa: 0 -1 -2
++  4.	(x,y)(0.0,-1.0)
+		while((!y) > x) y=-1.0 V !y = 0 0.0>0.0 F --> non esegue il ciclo while
+		(++x,++y)(1.0,0.0)
+	  Stampa: 1 0
++  5. Riga2: conflitto di nomi tra la variabile locale di tipo double e il parametro passato
+			 alla funzione di tipo intero
++  6.	f(4) = f(f(3)) = f(1) = 1
+		f(3) = f(f(2)) = f(1) = 1
+		f(2) = f(f(1)) = f(1) = 1
+		f(1) = 1
+	  Stampa: 1
++  7. Stampa: 1 0
++  8. Stampa 1a riga: 1 8
+	  Stampa 2a riga: 1 N.D.
++  9. Stampa: a1 a2 + una sequenza indefinita di caratteri
++ 10.	p[0] = *(p+0) = *p = *(&S1) = S1
+		q[0] = *(q+0) = *q = *(&S2) = S2
+	  Stampa: a1 a2 + una sequenza indefinita di caratteri
+
+Simulazione 13_12_2019
++  1.	x || !x + !x
+		1 N.C.
+		x && !x + !x
+		1 && 0 + 0 = 0+0 = 0
+		(-x || -x) + (-x && -x)
+		(-1 || -1) + (-1 && -1) = V + V = 1+1 = 2
+	  Stampa: 1 0 2
++  2.	(x,y)(1,0)
+		(x>y) V if(y) F --> y-x = 0-1 = -1
+	  Stampa: -1
++  3.	i = 0
+		for(; i+6 != 0; )
+	  Stampa: -2 -4 -6
++  4. f(f(10)) = f(-10) non ritorna
+	  f(10) = -10
+	  Stampa: N.D.
++  5. Call tree:
+		f(1)
+			f(0)
+				f(-1) RIT
+				x:0
+				f(-1) RIT
+			x:1
+			f(0)
+				f(-1) RIT
+				x:0
+				f(-1) RIT
+	  Stampa: 0 1 0
++  6. 	sizeof(A)/sizeof(A[1]) = (4*sizeof(int))/(2*sizeof(int)) = 2
+		A[0][0] A[1][1]
+	  Stampa: 1 4
+-  7.	**(A+1) = *A[1] = *(A[1]+0) = A[1][0]
+	  Stampa: 3
+-  8.	p | &x |     q --> "Ciao"
+			 \--> x
+		*p = q
+		p | q |   q --> "Ciao"
+		p[1] = q[1] = 'i', p[2] = q[2] = 'a'
+	  Stampa: ia
+
+Esame 14_01_2020
++  1.	M(M(1+1)) = M(1+1*1+1) = 1+1*1+1 * 1+1*1+1 = 1 + 1+1+1 + 1 = 5
+		M(M(2)) = M(2*2) = 2*2 * 2*2 = 4*4 = 16
+	  Stampa: 5 16
++  2.	int x = 0, y = 0;
+		(x-- || y--) && (--x || --y);
+		(0 x=-1 || 0 y=-1) && NC;
+ 		(x++ && y++) || (++x && ++y);
+		(-1 x=0 && -1 y=0) || NC;
+	  Stampa: 0 0
++  3.	int x = 0, y = 0;
+		if((x-- || y--) && (--x || --y))
+		if((0 x=-1 || 0 y=-1) && NC)  F
+		if((x++ && y++) || (++x && ++y))
+		if((-1 x=0 && -1 y=0) || NC)  V
+		x=0 y=0
+	  Stampa: 2 2
++  4.	i,j 00 01
+	  Stampa: 0\n 1\n
++  5.	f(-2) = 0.5*f(-1) = 0.5*0.5*f(0) = 0.25*1 = 0.25
+	  Stampa: 0.25
+-  6.	p e q puntatori di tipo vettore dove il vettore puntato da p ha dimensione 3 mentre quello puntato da q ha dimensione 4
+		p[1][2] = *(p[1]+2) = *(*(p+1)+2) = *(*(A+3)+2) = *(A[3]+2) = A[3][2] = 6
+		q[1][2] = *(q[1]+2) = *(*(q+1)+2) = *(*(A+5)+2) = *(A[5]+2) = A[5][2] = A[1][3] = 8
+	  Stampa: 6 8
+-  7.	p+20 = N.D. | p+11 = test | p+15 = '\0'
+	  Stampa: N.D. test  (stringa nulla)
+-  8.	p e q puntatori di tipo matrice dove il tipo del puntatore a vettore *p equivale al tipo di *q (vettore di dim 4)
+		p[0][1][2] = *(p[0][1]+2) = *(*(p[0]+1)+2) = *(*(*(p+0)+1)+2) = *(*(*(&A+0)+1)+2) = *(*(A+1)+2) = *(A[1]+2) = A[1][2] = 7
+		q[0][1][2] = *(q[0][1]+2) = *(*(q[0]+1)+2) = *(*(*(q+0)+1)+2) = *(*(*(&A+0)+1)+2) = *(*(A+1)+2) = *(A[1]+2) = A[1][2] = 7
+	  Stampa: 7 7
+
+Esame 28_01_2020
++  1.	M(M(2*2)) = M(2*2/2*2) = 2*2/2*2 / 2*2/2*2 = 4
+		M(M(4)) = M(4/4) = 4/4 / 4/4 = 1/4/4 = 0/4 = 0
+	  Stampa: 4 0
++  2.	int x = 0, y = 0;
+		(x++ || y++) ? x++ : y++
+		(0 x=1 || 0 y=1) F (1 y=2)
+ 		(--x && --y) ? --x : --y
+		(x=0 0 && N.C.) F (y=1 1)
+	  Stampa: 1 1
++  3.	int x = 0, y = 0;
+		if((x++ || y++) ? x++ : y++)
+		if((0 x=1 || 0 y=1) F --> (1 y=2)) V
+		if((x=0 0 && N.C.) F --> (y=1 1)) V
+	  Stampa: 0 1
++  4. 	int x = 0, y = 0;
+		while(x++ || y++ ? x++ : y++)
+			while((0 x=1 || 0 y=1) F --> (1 y=2)) V
+		if(--x && --y ? --x : --y)
+			if((x=0 0 && N.C.) F --> (y=1 1)) V
+		x = 0 , y = 1
+			while((0 x=1 || 1 y=2) V --> (1 x=2)) V
+ 			if((x=1 1 && y=1 1) V --> (x=0 0)) F
+		x = 0 , y = 1
+	  Stampa: 0 1\n e poi va in loop senza stampe
++  5.	f(1) = 2*f(0) = 2*1.0 = 2.0
+		f(0) = 
+		f(-1) =
+		f(-2) =
+		f(...)
+	  Va in stack overflow, non arriva a risolvere le chiamate
+	  Stampa: N.D.
++  6. Stampa: 5 4
++  7.	x = "ciao";
+			f(x) c = &x[0] *c = x[0]
+			c && *c (!NULL && 'c') V
+	  Stampa: ciaooaic\n
++  8.	char *c = "ciao";
+			c && *c && **c (!NULL && !NULL && 'c') V
+	  Stampa: ciaooaic\n
+
+Esame 19_02_2020
++  1.	M(M(1+2)) = M(1+2-1+2) = 1+2-1+2 - 1+2-1+2 = 4 -1-1+2+2 = 4+4-2 = 6
+		M(M(3)) = M(3-3) = 3-3 - 3-3 = 0-3-3 = -6
+	  Stampa: 6 -6
++  2.	(x,y)(0,1)
+		(x++ || y-1) && (x++ || ~x || !x || --x)
+		(0 x=1 || 0)F && N.D.
+
+		(y++ || x-1) && (y++ || ~y || !y || --y)
+		(1 y=2 || N.D.)V && (2 y=3)V
+	  Stampa: 1 3
++  3.	(x,y)(0,1)
+		(x++ || y-1) && (x++ || ~x || !x || --x)
+		(0 x=1 || 0)F && N.D. (F)
+	  Stampa: 1 1
++  4. 	(x,y)(0,1)
+		while((x++ || y-1) && (x++ || ~x || !x || --x))
+			while(0 x=1 || 0)F && N.D. (F)
+		x = 1 , y = 1
+	  Stampa: 1 1
+-  5.	f(+3) = f(-3+1) = f(-2) = f(+2-1) = f(+1) = -1
+		f(-3) = f(+3-1) = f(+2) = f(-2+1) = f(-1) = +1
+	  Stampa: -1 1
++  6. Stampa: g g g +sequenza indeterminata di caratteri
++  7.	s[0] = s , *(s+2) = s[2] = r , 2[s+2] = *(2+s+2) = *(s+4) = s[4] = n
+      Stampa: s r n
++  8.	s = {'c','i','a','o','\0'}
+		a[0][0] = *(a[0]+0) = *(*(a+0)+0) = *(*(d+0)+0) = *(d[0]+0) = s[0] = 'c'
+		b[0][1] = *(b[0]+1) = *(*(b+0)+1) = *(*(d+0)+1) = *(d[0]+1) = s[1] = 'i'
+		c[1][0] = *(c[1]+0) = *(*(c+1)+0) = *(*(d+2)+2) = *(d[0]+2) = s[2] = 'a'
+		d[2][1] = *(d[2]+1) = *(*(d+2)+1) = *(*(d+2)+1) = *(d[2]+1) = s[3] = 'o'
+	  Stampa: ciao
+
+Esame 08_06_2020
++  1.	#define M(x) x*x
+		#define S(x) x+x
+		M(S(1+1)) = M(1+1+1+1) = 1+1+1+1 * 1+1+1+1 = 3+1+3 = 7
+		S(M(1+1)) = S(1+1*1+1) = 1+1*1+1 + 1+1*1+1 = 1+1+1 + 1+1+1 = 3+3 = 6
+	  Stampa: 7 6
++  2. Stampa: N.D. 1
++  3.	(x,y)(0,0)
+		++x && (++y || x++);
+		(x=1 1) && (y=1 N.C.) (x,y)(1,1)
+		--y && (--x || y--);
+		(y=0 0) && N.C. (x,y)(1,0)
+	  Stampa: 1 0
++  4.	(i,j)(0,0)
+		i=0 j=0
+	  Stampa: 0 1 2 3 ..
+	  Non esce dal ciclo for interno 
++  5.	f(-2) = (-2)*f(-1) = (-2)*(-1)*f(0) = (-2)*(-1)*(1) = 2
+		f(2) non ritorna dalla funzione
+	  Stampa: 2 N.D.
++  6. Stampa: N.D. N.D. (la funzione ritorna un puntatore ad un'area deallocata, dangling pointer)
++  7. Stampa: oaic
++  8. Stampa: ciao
+
+Esame 06_07_2020
++  1.	#define M(x) x*x
+		#define S(x) x+x
+		M(S(1+2)) = M(1+2+1+2) = 1+2+1+2 * 1+2+1+2 = 4+2*1+5 = 6+5 = 11
+		S(M(3)) = S(3*3) = 3*3 + 3*3 = 9+9 = 18
+	  Stampa: 11 18
++  2.	int x = 1, y = 1;
+		(x-- || y--) && (--x || --y);
+		(1 x=0 || NC) && (x=-1 -1 || NC);
+ 		(x++ && y++) || (++x && ++y);
+		(-1 x=0 && 1 y=2) || NC;
+	  Stampa: 0 2
++  3.	int x = 1, y = 1;
+		if((x-- || y--) && (--x || --y))
+		if((1 x=0) && (x=-1 -1))  V
+	  Stampa: 1 1
++  4. Stampa: 0 0\n 0 1\n 
++  5. Stampa: 0 0
++  6.	sizeof(s) = sizeof(5 char)=5 , strlen(s)=4
+	  Stampa: 5 4
++  7.	(s-s)[s] = 0[s] = *(0+s) = *(s+0)= *s = c
+	  Stampa: ccc
+-  8.	a[0][0] = *(a[0]+0) = *(*(a+0))   = **a = s[0] = 'c'
+		b[0][1] = *(b[0]+1) = *(*(b+0)+1) = *(*d+1) = *(*d+1) = s[1] = 'i'
+		c[1][0] = *(c[1]+0) = *(*(c+1))   = *(*d+2) = s[2] = 'a'
+		d[2][1] = *(d[2]+1) = *(*(d+2)+1) = *(*d+3) = s[3] = 'o'
+	  Stampa: ciao
+
+Esame 14_09_2020
++  1.	M(M(2+2)) = M(2+2/2+2) = 2+2 / 2+2 / 2+2/2+2 = 2 + 1+1+1 + 2 = 7
+		M(M(4)) = M(4/4) = 4/4 / 4/4 = 1/4/4 = 0/4 = 0
+	  Stampa: 7 0
++  2.	int x = 1, y = 1;
+		(x++ && y++) ? x-- : y--
+		(1 x=2 && 1 y=2) V (2 x=1)
+ 		(--x || --y) ? ++x : ++y
+		(x=0 0 || y=1 1) V (x=1 1)
+	  Stampa: 2 1
++  3.	int x = 1, y = 1;
+		if(x++ && y++ ? x-- : y--)
+		if((1 x=2 && 1 y=2) V --> (2 x=1)) V
+		x = 1 , y = 2
+	  Stampa: 2 3
++  4. 	int x = 1, y = 1;
+		while(x++ && y++ ? x-- : y--)
+			while(1 x=2 && 1 y=2 V --> (2 x=1)) V
+		if(--x || --y ? ++x : ++y)
+			if((x=0 0 || y=1 1) V --> (x=1 1)) V
+		x = 1 , y = 1
+	  Stampa in loop: 1 1\n
++  5.	f(-1) = 0.5*f(0) = 0.5*1 = 0.5
+		f(1) = 2*f(0) = 2*1.0 = 2.0
+	  Stampa: 0.5 2.0
+-  6.	s3 = {'c','i','a'};
+	  Stampa: o o N.D.
++  7.	(s-s+1)[s+1] = (1)[s+1] = *(s+1+1) = *(s+2) = s[2] = 'a' | *(s+3) = s[3] = 'o' | 4[s] = *(4+s) = *(s+4) = s[4] = '\0'
+	  Stampa: ao (stringa nulla)
++  8.	a[0][3] = *(a[0]+3) = *(*(a+0)+3) = *(*(d+0)+3) = *(d[0]+3) = s[3] = 'o'
+		b[0][0] = *(b[0]+0) = *(*(b+0)+0) = *(*(d+0)+0) = *(d[0]+0) = s[0] = 'c'
+		c[1][0] = *(c[1]+0) = *(*(c+1)+0) = *(*(d+2)+2) = *(d[0]+2) = s[2] = 'a'
+		d[1][0] = *(d[1]+0) = *(*(d+1)+0) = *(*(d+1)+0) = *(d[0]+1) = s[1] = 'i'
+	  Stampa: ocai
+
+Simulazione 18_12_2020
++  1.	#define M(x,y) x/y
+		M(1, 1+9) = 1/1+9 = 1+9 = 10
+	  Stampa: 10
++  2. Stampa: 0 1
++  3. Stampa: 1 1
+-  4.	while((x++ || y++) ? x++ : y++)
+			if((--x && --y) ? --x : --y)
+				printf("%d %d\n", x, y);
+
+		x=0 | x=1 x=0     | x=0 | x=1 x=2 x=1 x=0 | x=0
+		y=0 | y=1 y=2 y=1 | y=1 | y=2     y=1     | y=1
+	  Stampa: 0 1 loop senza stampe
++  5.	f(2) = f(1)+f(0)+f(-1) = 3
+	  	f(3) = f(2)+f(1)+f(0) = 3+1+1 = 5
+		f(4) = f(3)+f(2)+f(1) = 5+3+1 = 9
+	  Stampa: 5 9
++  6.	sizeof(a) = 1 , sizeof(b) = 2 , sizeof(c) = 1*2 = 2
+		(1+2 < 2) (3 < 2) F --> sizeof(c),sizeof(a)+sizeof(b)
+	  Stampa: 2 3
++  7.	A[2][3] = {{0,1,2},{3,4,5}} --> A00 0  A01 1  A02 2  A10 3  A11 4  A12 5
+		int (*r)[1] = A;
+		p[1][1] = *(p[1]+1) = *(*(p+1)+1) = *(*(r+2)+1) = *(*(r+0)+3)= *(*A+3) = A[0][3] NO_OK = A[1][0] = 3
+		q[1][1] = *(q[1]+1) = *(*(q+1)+1) = *(*(r+3)+1) = *(*(r+0)+4)= *(*A+4) = A[0][4] NO_OK = A[1][1] = 4
+	  Stampa: 3 4
++  8.	(p1) -.  x|1|		[q1] --> (p1)
+		(p2) --> y|0|		[q2] --> (p2)
+
+		*q2 = p2 = &x           .-----------------.
+			(p1) -..-> x|1|		[q1] --> (p1) --> y|0|
+			(p2) -''-> y|0|		[q2] --> (p2) --> x|1|
+										  '-------'
+	  Stampa: 0 1
+
+Esame 11_01_2021
++  1.	#define M(x,y) (x = y++)
+		M(y,x) --> y = x++ (x,y)(2,1)
+		M(x,x) --> x = x++ x N.D.
+	  Stampa: N.D. 1
++- 2.	x = (y = (z = z + 1) + 1) + (x = 1);(x,y,z)(1,1,1)
+		x = (y = (z = 2) + 1) + (x = 1); 	(x,y,z)(1,1,1)
+		x = (y = 2 + 1) + (x = 1);			(x,y,z)(1,1,2)
+		x = (y = 3) + (x = 1);				(x,y,z)(1,1,2)
+		x = 3 + (x = 1);					(x,y,z)(1,3,2)
+	  Stampa: N.D. 3 2
++  3. Stampa: 1 N.D.
++  4.	init i=6
+		check i=5
+		5 (i=4)
+		step i=3
+		check i=2
+		2 (i=1)
+		step i=0
+		check 0 (i=-1)
+	  Stampa: 5 2 
++  5.	f(1)
+			x = f(-1) = -1
+			x = -2;
+			x = f(-2+2) = f(0) = 0
+		f(3)
+		  	x = f(1) = 0
+			x = -1
+			x = f(-1+2) = f(1) = 0
+	  Stampa: 0 0
++  6.	sizeof("ciaone") = 7 , sizeof(s) = 6
+	  Stampa: 7 6
++  7.	s punta a \0
+		s[-3] = *(s-3) = 'o'
+		(-2)[s] = *(-2+s) = *(s-2) = s[-2] = 'n'
+		*(s-1) = s[-1] = 'e'
+	  Stampa: one
++  8.	s punta a \0
+		*(p[0]+1) = *(*p+1) = *(s+1) = s[1] = 'i'
+		*(*p+2) = *(s+2) = s[2] = 'a'
+		p[0][3] = *(p[0]+3) = *(*p+3) = *(s+3) = s[3] = 'o'
+	  Stampa: iao
+
+Esame 25_01_2021
++  1.	#define M(x,y) x*y
+		M(2+2,2+2) = 2+2 * 2+2 = 2 + 2*2 + 2 = 2+4+2 = 8
+		M(2*2,2*2) = 2*2 * 2*2 = 4*4 = 16
+	  Stampa: 8 16
++  2.	(x,y)(1,1)
+			(x++ || y--) && (--x && --y);
+			(1 x=2 || N.C.) && (x=1 1 && y=0 0) F (x,y)(1,0)
+	  Stampa: 1 0
++  3.	(x,y)(1,1)
+			vedere punto 2 - espressione falsa
+			(x,y)(1,0) --> (!x,!y)(0,1)
+	  Stampa: 0 1
++  4.	init while(cond nxt_step) {istr nxt_step} 
+			init | cond istr nxt_step | cond istr nxt_step | ...
+				 .-----------------------------------------------------.
+			i=3  '-> | (3 i=4)V  if(4 i=3 && i=4 4) (PRINT 4 i=3) | <--'
+	  Stampa in loop: 4
++  5.	f(2)(y=0) (2<=1 y=1)F
+		f(1)(y=1) (1<=2 y=2)V (x,y)(1,2) ret x+y = 3
+
+		f(2)(y=2) (2<=3 y=3)V (x,y)(2,3) ret x+y = 5
+	  Stampa: 3 5
++  6.	s1 --> {'s','t','r','i','n','g','1','\0'}
+		s2  =  {'s','t','r','i','n','g','2'}
+		strlen() conta i caratteri della stringa (dall'inizio al carattere terminatore che non viene conteggiato)
+
+		s1[strlen(s1)-1] = s1[7-1] = s1[6] = 1
+		s2[strlen(s2)-1] = s2[N.D.-1] = N.D.
+	  Stampa: 1 N.D.
++  7.	A  =  { 1 , 2 , 3 , 4 , 5}
+		(p1) = (A) --> A[0]|1|
+		sizeof(A)/sizeof(int) = 5*4 / 4 = 5
+		(p2) = (A+5) = A[5]|?|
+
+		(p2-p1) --> A[5-1] = A[4] = 5
+		*p1 = A[0] = 1
+		*p2 = A[5] = ??
+	  Stampa: 5 1 N.D.
++  8.	[p1]=[&p1] --> (p1) --> | |
+		[p2]=[&p2] --> (p2) --> | |
+
+		x|1|
+		(q) --> | |
+		[p1] --> x|1| x variabile locale
+		[p2] --> q|1| q allocato dinamicamente
+	  Stampa: N.D. 1
+
+Esame 08_02_2021
++  1.	M(x) x*x
+		M(M(2+0)) = M(2+0 * 2+0) = 2+0 * 2+0  *  2+0 * 2+0 = 2 + 0*2 + 0*2 + 0*2 + 0 = 2
+		M(M(2)) = M(2 * 2) = 2 * 2  *  2 * 2 = 4*4 = 16
+	  Stampa: 2 16
++  2.	L'ordine di esecuzione dei paramentri è non definito.
+	  Stampa: N.D. N.D.
++  3.	2==4 F , 4==4 V
+	  Stampa: 0 1
++  4.	init do {istr nxt_step} while(cond nxt_step) 
+			init | istr cond nxt_step | istr cond nxt_step | ...
+			x=3  | if(3>2)(x=2) V (x=1) (1 x=2)V | <--+
+				 | if(2>2)(x=1) F (x=2) (2 x=3)V | ---+
+	  Non stampa niente poiché non esce dal ciclo
++  5.	f(-3) = (-3)*f(-2) = (-3)*(-2)*f(-1) = (-3)*(-2)*(-1)*f(0) = 6*(-1)*1 = -6
+		f(3) = 3*f(2) = 3*2*f(1) = 3*2*1*f(0) = 3*2*1*1 = 6
+	  Stampa: -6 6
+-  6. NO	A[3][3] = {{1,2},{4,5}};
+			(sizeof(A)/sizeof(int) , sizeof(A[0])/sizeof(int))
+			((4*4)/4 , (2*4)/4) --> ((4) , (2))
+	  SI	A[3][3] = {{1,2,0},{4,5,0},{0,0,0}};
+			(sizeof(A)/sizeof(int) , sizeof(A[0])/sizeof(int))
+			((9*4)/4 , (3*4)/4) --> ((9) , (3))
+	  Stampa: 9 3
++  7.	A[3][3] = {{1,2,0},{4,5,0},{0,0,0}} --> A00 1  A01 2  A02 0  A10 4  A11 5  A12 0 A20 0  A21 0  A22 0
+		int (*r)[1] = A;
+		p[1][2] = *(p[1]+2) = *(*(p+1)+2) = *(*(r+1*2)+2) = *(*(r+0)+4)= *(*A+4) = A[0][4] NO_OK = A[1][1] = 5
+		q[1][2] = *(q[1]+2) = *(*(q+1)+2) = *(*(r+1*3)+2) = *(*(r+0)+5)= *(*A+5) = A[0][5] NO_OK = A[1][2] = 0
+	  Stampa: 5 0
++  8.	A[3][3] = {{1,2,0},{4,5,0},{0,0,0}} --> A00 1  A01 2  A02 0  A10 4  A11 5  A12 0 A20 0  A21 0  A22 0
+		p e q sono puntatori a matrici, però con lo stesso numero di elem. x riga di A, quindi si può subito deferenziare per passare ai vettori
+			int (*P)[2] = *p = p[0];
+			int (*Q)[3] = *q = q[0];
+
+			int (*r)[1] = A;
+
+		p[0][2][0] = (*p)[2][0] = P[2][0] = *(p[2]+0) = *(*(p+2)+0) = *(*(r+2*2)+0) = *(*(r+0)+4)= *(*A+4) = A[0][4] NO_OK = A[1][1] ok = 5
+		q[0][2][0] = (*q)[2][0] = Q[2][0] = *(q[2]+0) = *(*(q+2)+0) = *(*(r+2*3)+0) = *(*(r+0)+6)= *(*A+6) = A[0][6] NO_OK = A[1][3] NO_OK = A[2][0] = 0
+	  Stampa: 5 0
+
+Esame 14_06_2021
++  1.	M(x,y) (x, y++)
+							(x,y)(0,1)
+		M(y,x) --> y = x++;	(x,y)(1,0)
+		M(y,y) --> y = y++;	(x,y)(1,?)
+	  Stampa: 1 N.D.
+-  2.	(x,y,z)(0,0,0) - x = (y = (z = z + 1) + 1) + (x = 1);
+		(x,y,z)(1,0,1) - x = (y = z + 1) + (x = 1);
+		(x,y,z)(1,2,1) - x = y + (x = 1);
+		(x,y,z)(?,2,1) - 
+	  Stampa: N.D. 2 1
++  3.	(x,y)(1,0)
+			(V || N.V.)(0,0) && (F && N.V.)(-1,0)
+			espressione falsa
+			(!x,!y)(0,1)
+	  Stampa: 0 1
++  4.	init do {istr nxt_step} while(cond nxt_step) 
+			init | istr cond nxt_step | istr cond nxt_step | ...
+			x=-2 | if(-2<2)(x=-1) V (x=0) (0 x=-1)F | <--+
+	  Stampa: -1
++  5.	f(2)(y=-2) (2<=-1  y=-1)F
+		f(1)(y=-1) (1<= 0  y=0 )F
+		f(0)(y= 0) (0<= 1  y=1 )V (x,y)(0,1) ret x+y = 1
+
+		f(2)(y= 1) (2<= 2  y= 2)V (x,y)(2,2) ret x+y = 4
+	  Stampa: 1 4
++  6.   sizeof(['c','i','a','o','\0']) = 5
+		sizeof(['c','i','a','o','\0','_']) = 6
+	  Stampa: 5 6
++  7.	A[4][4] = {{1,2,0,0},{4,5,0,0},{0,0,0,0},{0,0,0,0}} --> A00 1  A01 2  A02 0  A03 0  A10 4  A11 5  A12 0  A13 0  . . .
+		introduco int (*r)[1] = A;
+		p[1][2] = *(p[1]+2) = *(*(p+1)+2) = *(*(r+1*2)+2) = *(*(r+0)+4)= *(*A+4) = A[0][4] NO_OK = A[1][0] = 4
+		q[1][2] = *(q[1]+2) = *(*(q+1)+2) = *(*(r+1*3)+2) = *(*(r+0)+5)= *(*A+5) = A[0][5] NO_OK = A[1][1] = 5
+	  Stampa: 4 5
++  8.	A[4][4] = {{1,2,0,0},{4,5,0,0},{0,0,0,0},{0,0,0,0}} --> A00 1  A01 2  A02 0  A03 0  A10 4  A11 5  A12 0  A13 0  . . .
+		p e q sono puntatori a matrici, però con lo stesso numero di elem. x riga di A, quindi si può subito deferenziare per passare ai vettori
+			int (*P)[2] = *p = p[0];
+			int (*Q)[3] = *q = q[0];
+
+		int (*r)[1] = A;
+
+		p[0][2][0] = (*p)[2][0] = P[2][0] = *(p[2]+0) = *(*(p+2)+0) = *(*(r+2*2)+0) = *(*(r+0)+4)= *(*A+4) = A[0][4] NO_OK = A[1][0] ok = 4
+					 (*q)[1][2] = Q[1][2] = *(q[1]+2) = *(*(q+1)+2) = *(*(r+1*3)+2) = *(*(r+0)+5)= *(*A+5) = A[0][5] NO_OK = A[1][1] ok = 5
+	  Stampa: 4 5
+
+Esame 06_07_2021
++  1.	x = -1
+		M(x+x,x+x) = x+x*x+x = -1 + (-1)*(-1) + -1 = -1 + 1 + -1 = -1
+		M(x*x,x*x) = x*x*x*x = (-1)*(-1)*(-1)*(-1) = 1*1 = 1
+	  Stampa: -1 1
++  2.	(x,y)(0,1)
+		(x++ || y--) && (--x && --y);
+		(0 x=1 || 1 y=0)V && (x=0 0 && N.V.)F F (x,y)(0,0)
+	  Stampa: 0 0
+-  3.	!x puo' valere solo 0 o 1
+		percio' verranno sempre eseguiti i primi due case
+		mancando i break esce quando arriva al default
+		assegnando 2 a x, quindi:
+		(x,y)(2,??)
+	  Stampa: 2 N.D.
++  4.	init while(cond nxt_step) {istr nxt_step} 
+			init | cond istr nxt_step | cond istr nxt_step | ...
+			 .-----------------------------------------------------.
+		i=2  '-> | (2 i=3)V  if(3 i=2 && i=3 3) (PRINT 3 i=2) | <--'
+	  Stampa in loop: 3
+-  5.	f(2) {x=f(0) x=0 x=f(-2) x=-2} -2
+		f(4) {x=f(2) v.sopra x=-2 x=f(-4) x=-4} -4
+	  Stampa: -2 -4
++  6. NO	A[3][2] = {{1,2},{3,4},{5,6}};
+			(sizeof(A)/sizeof(int) , sizeof(A[0])/sizeof(int))
+			((6*4)/4 , (2*4)/4) --> ((6) , (2))
+	  SI	A[4][4] = {{1,2,0,0},{3,4,0,0},{5,6,0,0},{0,0,0,0}};
+			(sizeof(A)/sizeof(int) , sizeof(A[0])/sizeof(int))
+			((16*4)/4 , (4*4)/4) --> ((16) , (4))
+	  Stampa: 16 4
++  7.	char *s = "stringadiprova";
+		i[] = [ 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10, 11, 12, 13, 14 ]
+		s[] = ['s','t','r','i','n','g','a','d','i','p','r','o','v','a','\0']
+		il ciclo arriva al carattere terminatore, cioe' s[0] = '\0'
+		i[] = [-14,-13,-12,-11,-10,-9 ,-8 ,-7 ,-6 ,-5 ,-4 ,-3 ,-2 ,-1 , 0  ]
+	
+									 s[-3] = 'o'
+		(-2)[s] = *(-2+s) = *(s-2) = s[-2] = 'v'
+							*(s-1) = s[-1] = 'a'
+	  Stampa: ova
++  8.	char *s = "stringadiprova"; char **p = &s;
+		i[] = [ 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10, 11, 12, 13, 14 ]
+		s[] = ['s','t','r','i','n','g','a','d','i','p','r','o','v','a','\0']
+	
+				  *(p[0]+1) = *(*p+1) = *(*(&s)+1) = *(s+1) = s[1] = 't'
+				  *(*p+2)             = *(*(&s)+2) = *(s+2) = s[2] = 'r'
+		p[0][3] = *(p[0]+3) = *(*p+3) = *(*(&s)+3) = *(s+3) = s[3] = 'i'
+	  Stampa: tri
+
